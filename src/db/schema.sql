@@ -183,6 +183,8 @@ CREATE TABLE party_traits (
 
     source_deal_id  VARCHAR(16),                -- 来源商单
     source_quote    TEXT,                       -- 原始材料原话引用【防幻觉关键】
+    source_channel  VARCHAR(32),                -- 来源渠道：manual_note/screenshot/import/chat_export
+    source_ref      TEXT,                       -- 原始材料定位：截图路径/消息ID
     confidence      NUMERIC(3,2),               -- 抽取置信度 0-1
     verified        BOOLEAN DEFAULT FALSE,      -- 是否人工确认
 
@@ -195,6 +197,8 @@ CREATE INDEX idx_traits_category ON party_traits(trait_category);
 
 COMMENT ON TABLE party_traits IS '【核心私有资产】达人/甲方的脾气、癖好、注意事项';
 COMMENT ON COLUMN party_traits.source_quote IS '原始材料原话引用，可溯源、防幻觉';
+COMMENT ON COLUMN party_traits.source_channel IS '来源渠道：manual_note/screenshot/import/chat_export';
+COMMENT ON COLUMN party_traits.source_ref IS '原始材料定位：截图路径/消息ID';
 COMMENT ON COLUMN party_traits.verified IS '仅 verified=true 的条目参与检索';
 
 -- ============================================================

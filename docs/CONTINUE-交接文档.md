@@ -1,8 +1,16 @@
 # StarForge 项目交接文档
 
 > **用途**：本文件用于把项目上下文交接给 VSCode / CodeBuddy 继续开发。
-> **写于**：2026-09-21
+> **版本**：v1.1（2026-09-21 更新）
 > **交接原因**：原开发环境（WorkBuddy 桌面端）响应卡顿，转移到 VSCode 继续。
+
+**v1.1 变更**：
+- 步骤 ②（Ollama embedding 实测）状态更新为 ✅ 完成，**bge-m3 已实测通过并定死**
+- 新增步骤「资产入库与运营成本设计」完成状态
+- 新增 `party_traits` 补字段待办
+- 文件清单补全（`数据录入格式.md`、`资产入库与运营成本设计.md`、`test_embedding.py`、`_output.txt`）
+- 修正 PRD 路径（已移至项目根目录）
+- 修正第 十二 节「下一步任务」（原写的是步骤 ②，实际已完成，应为步骤 ③）
 
 ---
 
@@ -57,10 +65,12 @@ C:\Users\Administrator\WorkBuddy\2026-09-21-10-45-59\starforge
 | 步骤 | 内容 | 状态 |
 |---|---|---|
 | ① | 项目骨架 + 数据库（schema / 种子数据 / 初始化） | ✅ **已完成** |
-| ② | Ollama embedding 实测（验证模型可用性） | ⬜ 未开始 |
-| ③ | 向量化入 ChromaDB | ⬜ 未开始 |
-| ④ | 需求解析（Prompt 设计与验证） | ⬜ 未开始 |
-| ⑤ | 混合检索实现（L1-A：先 SQL 过滤后向量） | ⬜ 未开始 |
+| ② | Ollama embedding 实测（验证模型可用性） | ✅ **已完成（bge-m3 定死）** |
+| — | 资产入库与运营成本设计 | ✅ **已完成（设计文档）** |
+| — | `party_traits` 补 `source_channel` / `source_ref` | ✅ **已完成（schema/init/文档三处同步）** |
+| ③ | 向量化入 ChromaDB | ✅ **已完成（170 条向量，检索验证通过）** |
+| ④ | 需求解析（Prompt 设计与验证） | ✅ **已完成（qwen-plus，澄清拦截）** |
+| ⑤ | 混合检索实现（L1-A：先 SQL 过滤后向量） | ✅ **已完成（4 样例验证通过）** |
 | ⑥ | 可溯源理由生成 | ⬜ 未开始 |
 | ⑦ | 评测集构建（30-50 条标注问题） | ⬜ 未开始 |
 | ⑧ | Dify 接入 | ⬜ 未开始（放最后） |
@@ -75,12 +85,23 @@ C:\Users\Administrator\WorkBuddy\2026-09-21-10-45-59\starforge
 | `starforge/data/seed_data.json` | 种子数据（虚构） | ✅ 已导入 |
 | `starforge/src/db/init_db.py` | 建表 + 导数据 + 校验 | ✅ 已验证通过 |
 | `starforge/eval/verify_data.py` | 数据校验脚本 | ✅ 已通过 |
+| `starforge/eval/test_embedding.py` | 步骤② embedding 实测脚本 | ✅ 已通过 |
+| `starforge/eval/test_context_truncation.py` | 步骤③前置：截断验证脚本 | ✅ 已通过 |
+| `starforge/eval/verify_vector.py` | 向量库检索验证脚本 | ✅ 已通过 |
+| `starforge/src/retrieval/vectorize.py` | 步骤③向量化脚本 | ✅ 已通过 |
+| `starforge/src/core/llm.py` | 步骤④需求解析 + 澄清策略 | ✅ 已通过 |
+| `starforge/eval/test_parse.py` | 步骤④需求解析验证 | ✅ 已通过 |
+| `starforge/src/retrieval/hybrid_search.py` | 步骤⑤混合检索 L1-A | ✅ 已通过 |
+| `starforge/eval/test_hybrid.py` | 步骤⑤混合检索验证 | ✅ 已通过 |
 | `starforge/.env` | 真实配置（**不入库**，已在 .gitignore） | ✅ 已配置 PG |
 | `starforge/.env.example` | 配置模板 | ✅ |
 | `starforge/requirements.txt` | 依赖清单 | ✅ |
-| `starforge/README.md` | 项目说明 | ⚠️ 有 2 处过时描述（见第 八 节） |
-| `starforge/docs/PRD-广告中介商单Agent工作台.md` | PRD v1.1 | ✅ |
-| `starforge/docs/实施文档-全过程记录.md` | 全过程实施记录（11 节） | ✅ |
+| `starforge/README.md` | 项目说明 | ✅ 已修正 |
+| `starforge/PRD-广告中介商单Agent工作台.md` | PRD v1.1（**注意：在项目根目录，不在 docs/**） | ✅ |
+| `starforge/docs/实施文档-全过程记录.md` | 全过程实施记录（14 节，v1.1） | ✅ |
+| `starforge/docs/数据录入格式.md` | 数据录入格式规范（5 表字段 + 枚举 + 人工确认） | ✅ |
+| `starforge/docs/资产入库与运营成本设计.md` | **资产入库机制设计（运营成本 / 闭环 / 冷启动）** | ✅ |
+| `starforge/docs/CONTINUE-交接文档.md` | 本文件 | ✅ |
 | `starforge/.venv/` | 虚拟环境（已建，依赖已装） | ✅ |
 
 ### 3.3 数据库实测状态
@@ -92,8 +113,10 @@ brands        :  8 行
 creators      : 20 行
 deals         : 17 行
 party_traits  : 30 行（全部 verified=TRUE）
-deal_reviews  :  0 行（表已建，暂无数据）
+deal_reviews  : 18 行（复盘种子数据，reviewer_role 含 agency/brand/creator）
 ```
+
+ChromaDB 向量库：170 条（creators 80 + deals 34 + deal_reviews 18 + brands 8 + party_traits 30）
 
 `party_traits` 分布：
 - severity：`warning` 14 条 / `info` 8 条 / `critical` 8 条
@@ -109,52 +132,83 @@ deal_reviews  :  0 行（表已建，暂无数据）
 
 ---
 
-## 四、下一步任务（步骤 ②，可直接执行）
+## 四、下一步任务（步骤 ③，可直接执行）
 
-### 4.1 目标
+### 4.0 前置说明：步骤 ② 已完成
 
-验证本地 Ollama 的 embedding 模型可用，**重点验证是否输出 NaN**。
+步骤 ②（Ollama embedding 实测）**已通过**，结论：
 
-### 4.2 背景（为什么专门验这个）
+- `bge-m3` 在 GPU 模式下处理 5 类文本（含代码块 / JSON / Markdown / 真实种子数据拼接）**全部无 NaN / Inf**
+- 判别力校验：相近句对 sim=0.8312，无关句对 sim=0.4905，差值 +0.3407，向量未退化
+- `ollama ps` 确认 `100% GPU`，即高危场景已被真实覆盖
+- **`EMBED_MODEL=bge-m3`、`EMBED_DIM=1024`，模型定死不再更换**
 
-bge-m3 在 GPU 模式下处理含 **JSON / Markdown 结构**的文本时会输出 NaN 向量，导致服务报 500。本项目数据恰好大量是「结构化字段 + 聊天记录」，属于高危场景。
+详见 `实施文档-全过程记录.md` 第十二节，脚本为 `eval/test_embedding.py`。
 
-### 4.3 操作清单
+> **从中得出的硬约束**：Embedding 模型换一次，向量空间就变一次，已入库的向量全部失效。所以模型选型是"一次决策"，**不要回头改**。
+
+---
+
+### 4.1 目标（步骤 ③）
+
+把 `creators` / `deals` / `deal_reviews` / `brands` 的文本字段向量化，写入 ChromaDB。
+
+### 4.2 操作清单
 
 ```powershell
-# 1. 确认 Ollama 服务在跑 & 已有哪些模型
+# 1. 确认 bge-m3 在跑（模型已定死，不需再选型）
 ollama list
 
-# 2. 若没有 bge-m3，拉取
-ollama pull bge-m3
+# 2. 读取 .env
+#    EMBED_MODEL=bge-m3 / EMBED_DIM=1024
+#    CHROMA_PATH=./data/chroma
+#    CHROMA_COLLECTION=starforge_creators
 
-# 3. 实测：重点测含 Markdown/JSON 的文本是否输出 NaN
-#    建议直接写个小脚本，分别测：
-#      (a) 纯中文自然语言（对照组）
-#      (b) 含 ``` 代码块 的文本
-#      (c) 含 {"key": "value"} JSON 的文本
-#      (d) 含 ### 标题 / | 表格 的 Markdown
-#    判定：任一情况出现 NaN / Inf，即判定该模型不可用
+# 3. 向量化范围（哪些字段进向量库）
+#    creators.profile_text / content_style / past_brands / cooperation_history
+#    deals.requirement_text / negotiation_notes
+#    deal_reviews.content
+#    brands.cooperation_notes
+#    party_traits.trait_content（仅 verified=TRUE）
 
-# 4. 若 bge-m3 异常 → 切换备用
-ollama pull qwen3-embedding:0.6b
-#    注意：本机显存仅 4GB，0.6B 模型（约 639MB）够用
+# 4. 写入 ChromaDB，记录 ID 必须保留可达性
+#    每个向量项的 metadata 至少含：来源表、记录 ID、字段名
+#    ← 这是"可溯源理由"的实现基础，必须有
 
 # 5. 配置 DashScope API Key（写入 .env）
 #    第 ④ 步需要，可以现在给，也可以到时再给
 ```
 
-### 4.4 判定标准
+### 4.3 ✅ 截断行为已验证（2026-09-21 实测）
 
-| 结果 | 动作 |
+步骤 ② 遗留的第 1 条限制已实测验证，结论如下（脚本 `eval/test_context_truncation.py`）：
+
+| 验证项 | 结论 |
 |---|---|
-| 4 类文本全部输出正常有限值向量 | bge-m3 可用，继续步骤 ③ |
-| 任一情况出现 NaN / Inf | **立即弃用 bge-m3**，改 `qwen3-embedding:0.6b`；并同步更新 `.env` 的 `EMBED_MODEL` 与 `EMBED_DIM` |
-| 换模型后仍需重跑 | Embedding 模型一旦定死就不要换——**换模型必须重建整个向量库** |
+| 超长文本是否静默截断 | **会**。无报错、无警告，超出部分被静默丢弃 |
+| 实际有效输入长度 | **约 3072 中文字符**（2816 字符 cos=0.991 → 3072 字符 cos=1.000000 后恒定） |
+| `options.num_ctx` 是否有效 | **无效**。`/api/embed` 忽略该参数（4096/8192/32768 结果一致，30 万字也不报错） |
+| 模型上下文 | `ollama show` 显示 context length=8192，但 embedding 实际有效仅约 3000 中文字 |
 
-### 4.5 ⚠️ 关键约束
+**对步骤 ③ 的影响**：当前种子数据文本字段最长 120 字符，**不触发截断**；生产级长文本必须切块，**块上限定为 ≤ 2500 字符**（留余量）。
 
-**Embedding 模型必须一次定死。** 原因：换 embedding 模型 → 向量空间改变 → 已入库的所有向量失效 → 必须全量重建。所以步骤 ② 的模型选型是"一次决策"，做完不要回头改。
+### 4.4 ✅ 已处理：`party_traits` 补字段（2026-09-21 完成）
+
+设计已完成并**已落代码**：
+
+```sql
+-- 已加入 schema.sql
+source_channel  VARCHAR(32);   -- manual_note/screenshot/import/chat_export
+source_ref      TEXT;          -- 截图路径/消息ID
+```
+
+**为什么放在步骤 ③ 之前**：ChromaDB 的 metadata 要存溯源信息，schema 已定，向量化的 metadata 设计一次到位。
+
+**已同步三处**：`schema.sql`（加列）、`init_db.py`（INSERT 加两字段，`source_channel` 默认 `manual_note`）、`数据录入格式.md`（字段表加两行）。已重跑 `init_db.py` 验证通过（30 条 trait 的 `source_channel` 均为 `manual_note`）。
+
+### 4.5 ⚠️ 关键约束（重复强调）
+
+**Embedding 模型必须一次定死。** 换 embedding 模型 → 向量空间改变 → 已入库的所有向量失效 → 必须全量重建。**`bge-m3` 已定死，不要再做模型选型讨论。**
 
 ---
 
@@ -318,8 +372,8 @@ DROP TABLE IF EXISTS deal_reviews CASCADE;
 
 | 位置 | 过时内容 | 应改为 |
 |---|---|---|
-| 技术栈表格 | `Embedding: Ollama + bge-m3` | 需按步骤 ② 实测结果定：若 bge-m3 触发 NaN 则改 `qwen3-embedding:0.6b` |
-| 目录结构 | 已列出 `src/core/` `src/retrieval/` 等目录 | 这些目录**尚未创建**，实际只有 `src/db/`、`data/`、`eval/`、`docs/` |
+| 技术栈表格 | ~~模型待定~~ | ✅ 已定 `bge-m3`（步骤②实测通过），README 已同步更新 |
+| 目录结构 | ~~已列出 `src/core/` `src/retrieval/`~~ | ✅ 已核实：README 当前目录结构已只列实际存在的目录，无需改 |
 
 ### 8.2 `requirements.txt` 可能缺依赖
 
@@ -333,11 +387,50 @@ openai>=1.30
 pandas>=2.0
 ```
 
-后续会用到但**尚未加入**：`fastapi`、`uvicorn`（Dify 接入时）。步骤 ② 若写实测脚本，可能需要 `numpy`。
+后续会用到但**尚未加入**：`fastapi`、`uvicorn`（Dify 接入时）。
+> 已核实（步骤②后）：`numpy` 随 `chromadb` 依赖一并安装，实测脚本未新增任何依赖，`requirements.txt` 无需改动。
 
-### 8.3 `deal_reviews` 表为空
+### 8.3 `deal_reviews` 表（✅ 已补数据）
 
-表已建但 0 行数据。而 `deal_reviews.content` 是设计中的"进向量库"字段之一。步骤 ③ 向量化时需要考虑：是补种子数据，还是 V1 先不向量化这张表。
+已补 18 条复盘种子数据（reviewer_role 覆盖 agency/brand/creator，仅关联 settled 状态的商单）。`deal_reviews.content` 确认纳入步骤 ③ 向量化。
+
+### 8.4 ✅ `party_traits` 溯源字段（已补，2026-09-21，见 4.4）
+
+**现状**：`party_traits` 只有 `source_quote`（一句原话，TEXT）和 `source_deal_id`（来源商单）。**缺「来源渠道」和「原始文件定位」**，无法支撑完整溯源链。
+
+**需补两个字段**：
+
+| 字段 | 类型 | 用途 |
+|---|---|---|
+| `source_channel` | `VARCHAR(32)` | `manual_note` / `screenshot` / `import` / `chat_export` |
+| `source_ref` | `TEXT` | 截图文件路径 / 消息 ID |
+
+**补全后溯源链**：
+
+```
+trait_id → source_quote（运营写的总结）→ source_ref（截图路径）→ 原始截图文件
+```
+
+**改动需同步三处**：
+1. `src/db/schema.sql` —— 加列
+2. `src/db/init_db.py` —— INSERT 语句加两个字段
+3. `docs/数据录入格式.md` —— 字段表加两行
+
+**建议在步骤 ③ 之前做**：ChromaDB 的 metadata 要存溯源信息，schema 先定可让向量化 metadata 一次到位，避免重建向量库。
+
+**代价**：重跑 `init_db.py` 会清空数据（当前全是种子数据，重建无损失）。
+
+**设计依据**：见 `docs/资产入库与运营成本设计.md` 第 6.2 节、`实施文档` 第 13.10 节。
+
+### 8.5 设计文档已完成但未落代码
+
+`docs/资产入库与运营成本设计.md` 已完成（Agent 边界 / 运营成本 / 闭环机制 / 冷启动 / 伪代码），**但其中的机制尚未写成代码**。特别是：
+
+- 结案状态流转触发抽取（`on_deal_status_changed`）
+- 待确认列表构建与极低成本确认流程
+- 抽取 Prompt（强制 `source_quote`，无则丢弃）
+
+这些属于 V2 范围，**不影响步骤 ③ 的推进**，但接手后应知道设计已存在，避免重复设计。
 
 ---
 
@@ -353,6 +446,10 @@ pandas>=2.0
 | **L1-C** | 混合检索策略：SQL 结果 ∪ 向量结果，双路并集后合并去重 |
 | **人工确认拦截** | 全局机制（非意图）：对外动作前强制中断，等待人工确认 |
 | **意图体系** | 7 用户意图 + 1 自动管道 + 1 全局拦截（详见 PRD 第 4 章） |
+| **前台 / 后台** | 前台 = 运营主动调用的 ①~⑦；后台 = 系统自动触发的 ⑧。边界设计见资产入库文档 |
+| **source_quote** | 原始材料原话引用。**V1 中由运营写的几句总结充当**，不经 OCR 以保证忠实性 |
+| **source_ref** | 原始材料定位（截图路径 / 消息 ID）。待补字段，使溯源链完整 |
+| **档 1/2/3** | raw 采集的三档方案：企微存档 / 文件夹监听 / 表单提交。V1 用档 3 |
 
 ---
 
@@ -416,11 +513,20 @@ python eval/verify_data.py
 | 文档 | 路径 | 内容 |
 |---|---|---|
 | **本文件** | `docs/CONTINUE-交接文档.md` | 交接说明、铁律、进度、下一步 |
-| PRD | `docs/PRD-广告中介商单Agent工作台.md` | v1.1，需求规格（11 章 + 2 附录） |
-| 实施记录 | `docs/实施文档-全过程记录.md` | 全过程实施细节（11 节），含决策日志 D-01~D-10、踩坑 P-01~P-06 |
+| PRD | `PRD-广告中介商单Agent工作台.md`（**项目根目录**） | v1.1，需求规格（11 章 + 2 附录） |
+| 实施记录 | `docs/实施文档-全过程记录.md` | 全过程实施细节（14 节，v1.1），含决策日志 D-01~D-16、踩坑 P-01~P-07 |
+| 数据录入格式 | `docs/数据录入格式.md` | 5 张表的**字段级**录入规范、枚举值约定、人工确认流程 |
+| **资产入库与运营成本设计** | `docs/资产入库与运营成本设计.md` | **Agent 边界 / 运营成本压缩 / 闭环机制 / 冷启动 / 伪代码**（13 节） |
+
+> **两份设计文档的分工**：
+> - `数据录入格式.md` 回答"**字段怎么填**"（数据规范）
+> - `资产入库与运营成本设计.md` 回答"**运营怎么操作、系统怎么自动接住**"（机制设计）
+>
+> 两者互补，不重复。
 
 **接手时的第一步动作建议**：
 1. 读本文件第二节「铁律」，确认理解行为约束。
 2. 跑一遍第十一节「复现清单」，确认本地环境正常。
-3. 执行第四节「步骤 ②」。
-4. 完成后**停下向用户汇报**，不要连续推进到步骤 ③。
+3. 读第四节（步骤 ③ 的任务）与第八节 8.4（`party_traits` 补字段待办）。
+4. 执行步骤 ③。
+5. 完成后**停下向用户汇报**，不要连续推进到步骤 ④。

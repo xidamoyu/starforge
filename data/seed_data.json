@@ -965,6 +965,135 @@
     }
   ],
 
+  "deal_reviews": [
+    {
+      "review_id": "R001",
+      "deal_id": "D001",
+      "reviewer_role": "agency",
+      "rating": 4,
+      "content": "整体顺畅。达人试用后如实提了「泡沫偏少」的缺点，粉丝反而更信任，转化稳定。经验：与她合作要先默认她会说真话，把可能被指出的产品短板提前同步给甲方，避免发布后甲方有情绪。"
+    },
+    {
+      "review_id": "R002",
+      "deal_id": "D002",
+      "reviewer_role": "agency",
+      "rating": 5,
+      "content": "性价比最高的一单。学生党博主报价低、零修改、响应快。经验：她的高效窗口是寒暑假，开学季要提前排期；预算紧张时优先考虑她。"
+    },
+    {
+      "review_id": "R003",
+      "deal_id": "D003",
+      "reviewer_role": "agency",
+      "rating": 4,
+      "content": "专业背书价值高，但沟通成本大。达人指出宣传口径「浓度提升50%」不规范，来回改了两版才定稿。经验：与成分党类达人合作前，先自查宣传合规性，把口径改严谨再给脚本。"
+    },
+    {
+      "review_id": "R004",
+      "deal_id": "D003",
+      "reviewer_role": "brand",
+      "rating": 4,
+      "content": "乙方指出标注问题让我们有些不悦，但这条科普视频的专业背书确实值回票价。已把宣传口径统一改为「配方升级」。后续此类合作会提前让法务过一遍宣传话术。"
+    },
+    {
+      "review_id": "R005",
+      "deal_id": "D004",
+      "reviewer_role": "agency",
+      "rating": 3,
+      "content": "因为 brief 晚给了三天，达人接了但有情绪，合作体验一般。经验：她的单子必须倒推一周预留 brief 时间，否则宁可改期也不要硬赶。"
+    },
+    {
+      "review_id": "R006",
+      "deal_id": "D005",
+      "reviewer_role": "agency",
+      "rating": 5,
+      "content": "顺畅的一单。达人先要成分表与质检报告，确认后一次通过，只改一处措辞。经验：专业向达人的资料包（成分表+质检）提前备齐，能显著减少返工。"
+    },
+    {
+      "review_id": "R007",
+      "deal_id": "D006",
+      "reviewer_role": "agency",
+      "rating": 4,
+      "content": "达人因配方争议成分要求换版，拖延两周但换来内容安全与达人信任。经验：母婴品类提前备好资质与检测报告，并把配方给达人预审。"
+    },
+    {
+      "review_id": "R008",
+      "deal_id": "D006",
+      "reviewer_role": "brand",
+      "rating": 5,
+      "content": "达人主动要求换配方，虽然流程被拖长，但她对孩子负责的态度让我们更愿意长期合作。后续已将她列为核心合作达人。"
+    },
+    {
+      "review_id": "R009",
+      "deal_id": "D007",
+      "reviewer_role": "agency",
+      "rating": 3,
+      "content": "团队化运作，沟通走商务对接人且中途换人，信息传递混乱，整体比预期慢一周。经验：此类达人关键节点要书面确认，排期预留一周缓冲。"
+    },
+    {
+      "review_id": "R010",
+      "deal_id": "D008",
+      "reviewer_role": "agency",
+      "rating": 5,
+      "content": "配合度最高的一单，零修改。达人如实说「口感一般但热量达标」，评论区反而认可。经验：口感一般的产品找他要提前有心理准备，真实反馈带来的信任比硬夸更值。"
+    },
+    {
+      "review_id": "R011",
+      "deal_id": "D009",
+      "reviewer_role": "agency",
+      "rating": 4,
+      "content": "报价极低、交付快，适合小预算铺量。经验：她粉丝量小、曝光上限有限，用于铺量而非主推；主推要找腰部以上达人。"
+    },
+    {
+      "review_id": "R012",
+      "deal_id": "D010",
+      "reviewer_role": "agency",
+      "rating": 4,
+      "content": "达人对参数吹毛求疵，把「最长14天」纠正为「使用场景下8-9天」，品牌起初不满但评论区更认可。经验：给硬核测评达人的参数必须是实测口径，不能给理想值。"
+    },
+    {
+      "review_id": "R013",
+      "deal_id": "D011",
+      "reviewer_role": "agency",
+      "rating": 3,
+      "content": "内容合格但沟通节奏慢，白天消息晚上才回。经验：与她合作统一改到晚上集中沟通，白天不催，避免焦虑。"
+    },
+    {
+      "review_id": "R014",
+      "deal_id": "D012",
+      "reviewer_role": "agency",
+      "rating": 4,
+      "content": "内容无可挑剔，但市场部想在正文加促销被达人拒绝，僵持两天。经验：她的底线是正文不带促销，优惠一律走评论区置顶，此边界要提前同步给甲方。"
+    },
+    {
+      "review_id": "R015",
+      "deal_id": "D012",
+      "reviewer_role": "brand",
+      "rating": 4,
+      "content": "市场部临时加促销被拒时有些不满，但最终改为评论区置顶，内容调性得以保持，数据也理想。后续会把「正文不带促销」作为与达人合作的前提写入 brief。"
+    },
+    {
+      "review_id": "R016",
+      "deal_id": "D013",
+      "reviewer_role": "agency",
+      "rating": 4,
+      "content": "达人坚持真实喂养两周，并如实说「另一只猫一般」，真实反馈反而带来下单。经验：提前备货留出试用周期，接受真实反馈、不要求美化。"
+    },
+    {
+      "review_id": "R017",
+      "deal_id": "D013",
+      "reviewer_role": "creator",
+      "rating": 5,
+      "content": "坚持真实喂养反馈是账号立身之本，即使如实说猫咪不爱吃也要说。品牌能接受真实反馈，合作体验好，愿意继续合作。"
+    },
+    {
+      "review_id": "R018",
+      "deal_id": "D014",
+      "reviewer_role": "agency",
+      "rating": 4,
+      "content": "报价从10800谈到8000，达人说产品适合中大型犬所以愿接。经验：先确认产品与达人宠物的适配性再报价，适配度高时议价空间更大。"
+    }
+  ],
+
   "party_traits": [
     {
       "trait_id": "T001",

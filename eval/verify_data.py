@@ -94,4 +94,21 @@ with conn.cursor() as cur:
         flag = "✅ 达标" if float(r[3]) >= 0.70 else "❌ 未达标（0.70门槛）"
         print(f"  {r[0]}  {r[1]:<12} 女性占比={float(r[3]):.3f}  {flag}")
 
+    print()
+    print("=" * 70)
+    print("【商单复盘 deal_reviews】按复盘角色与评分分布（私有经验资产）")
+    print("=" * 70)
+    cur.execute("""
+        SELECT reviewer_role, COUNT(*), AVG(rating)
+        FROM deal_reviews GROUP BY reviewer_role ORDER BY reviewer_role
+    """)
+    for r in cur.fetchall():
+        print(f"  {r[0]:<10} {r[1]} 条  平均评分={float(r[2]):.1f}")
+
+    cur.execute("""
+        SELECT rating, COUNT(*) FROM deal_reviews
+        GROUP BY rating ORDER BY rating DESC
+    """)
+    print("  评分分布: " + ", ".join(f"{r[0]}分×{r[1]}" for r in cur.fetchall()))
+
 conn.close()

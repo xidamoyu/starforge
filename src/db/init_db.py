@@ -100,13 +100,24 @@ def import_seed(conn):
             cur.execute(
                 """INSERT INTO party_traits (
                        trait_id, party_type, party_id, trait_category, trait_content,
-                       severity, source_deal_id, source_quote, confidence, verified)
-                   VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
+                       severity, source_deal_id, source_quote, source_channel, source_ref,
+                       confidence, verified)
+                   VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
                 (t["trait_id"], t["party_type"], t["party_id"], t["trait_category"],
                  t["trait_content"], t.get("severity", "info"), t.get("source_deal_id"),
-                 t.get("source_quote"), t.get("confidence"), t.get("verified", False)),
+                 t.get("source_quote"), t.get("source_channel") or "manual_note",
+                 t.get("source_ref"), t.get("confidence"), t.get("verified", False)),
             )
         print(f"[OK] party_traits: {len(data['party_traits'])} 条")
+
+        # --- deal_reviews ---
+        for r in data["deal_reviews"]:
+            cur.execute(
+                """INSERT INTO deal_reviews (review_id, deal_id, reviewer_role, rating, content)
+                   VALUES (%s,%s,%s,%s,%s)""",
+                (r["review_id"], r["deal_id"], r["reviewer_role"], r.get("rating"), r["content"]),
+            )
+        print(f"[OK] deal_reviews: {len(data['deal_reviews'])} 条")
 
 
 def verify(conn):
