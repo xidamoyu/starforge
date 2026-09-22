@@ -73,7 +73,7 @@ C:\Users\Administrator\WorkBuddy\2026-09-21-10-45-59\starforge
 | ⑤ | 混合检索实现（L1-A：先 SQL 过滤后向量） | ✅ **已完成（4 样例验证通过）** |
 | ⑥ | 可溯源理由生成 | ✅ **已完成（build_reasons，不做二次生成）** |
 | ⑦ | 评测集构建（分层评测） | ✅ **已完成（43 条，43/43 通过）** |
-| ⑧ | Dify 接入 | ⬜ 未开始（放最后） |
+| ⑧ | Dify 接入 | ✅ **已完成（Dify 1.17.1 自定义工具导入跑通；SSRF 两层已放行）** |
 
 **规则：步骤 ⑧（Dify）必须放最后。** 核心检索逻辑先在命令行调对，再接 Dify。原因见第 七 节坑 P-07。
 
@@ -96,6 +96,9 @@ C:\Users\Administrator\WorkBuddy\2026-09-21-10-45-59\starforge
 | `starforge/eval/testset.json` | 步骤⑦评测集（分层 43 条） | ✅ |
 | `starforge/eval/run_eval.py` | 步骤⑦评测脚本 | ✅ |
 | `starforge/eval/gen_creators.py` | 达人批量生成脚本 | ✅ |
+| `starforge/src/api/main.py` | 步骤⑧自建检索服务（FastAPI） | ✅ 已通过 |
+| `starforge/eval/test_api.py` | 步骤⑧服务验证 | ✅ 已通过 |
+| `starforge/docs/Dify接入说明.md` | Dify 接入说明 | ✅ |
 | `starforge/.env` | 真实配置（**不入库**，已在 .gitignore） | ✅ 已配置 PG |
 | `starforge/.env.example` | 配置模板 | ✅ |
 | `starforge/requirements.txt` | 依赖清单 | ✅ |

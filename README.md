@@ -54,9 +54,11 @@ starforge/
 │   │   └── init_db.py      # 建表 + 导入种子数据
 │   ├── core/
 │   │   └── llm.py          # 步骤④需求解析 + 澄清策略
-│   └── retrieval/
-│       ├── vectorize.py    # 步骤③向量化入 ChromaDB
-│       └── hybrid_search.py # 步骤⑤混合检索 L1-A
+│   ├── retrieval/
+│   │   ├── vectorize.py    # 步骤③向量化入 ChromaDB
+│   │   └── hybrid_search.py # 步骤⑤混合检索 L1-A
+│   └── api/
+│       └── main.py         # 步骤⑧自建检索服务（FastAPI）
 ├── eval/                   # 数据校验 / 评测集
 ├── docs/                   # 实施记录、交接文档、录入格式等
 ├── .env                    # 密钥（不入库）

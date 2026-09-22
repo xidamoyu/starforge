@@ -46,8 +46,8 @@
     {"id": "R008", "type": "recall", "query": "找健身垂类的达人", "must_recall": ["C025"]},
     {"id": "R009", "type": "recall", "query": "找汽车垂类的达人", "must_recall": ["C021"]},
     {"id": "R010", "type": "recall", "query": "找游戏垂类的达人", "must_recall": ["C022"]},
-    {"id": "C001", "type": "clarify", "query": "帮我找个达人合作一下", "expected": {}},
-    {"id": "C002", "type": "clarify", "query": "预算1万左右的合作", "expected": {}},
-    {"id": "C003", "type": "clarify", "query": "找个美妆达人", "expected": {}}
+    {"id": "Q001", "type": "clarify", "query": "帮我找个达人合作一下", "expected": {}},
+    {"id": "Q002", "type": "clarify", "query": "预算1万左右的合作", "expected": {}},
+    {"id": "Q003", "type": "clarify", "query": "找个美妆达人", "expected": {}}
   ]
 }

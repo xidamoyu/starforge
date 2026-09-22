@@ -21,11 +21,17 @@ sys.path.insert(0, str(ROOT))
 load_dotenv(ROOT / ".env")
 
 from src.core.llm import apply_coop_mode, parse_requirement  # noqa: E402
+from src.retrieval.rerank import is_enabled as rerank_enabled  # noqa: E402
+from src.retrieval.rerank import rerank  # noqa: E402
 
 OLLAMA_BASE = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434").rstrip("/")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "bge-m3")
 CHROMA_PATH = os.getenv("CHROMA_PATH", "./data/chroma")
 CHROMA_COLLECTION = os.getenv("CHROMA_COLLECTION", "starforge_creators")
+
+# 线上检索默认策略（可用 .env 的 SEARCH_STRATEGY 覆盖）。
+# hybrid_rerank：消融实测 MRR 0.715 → 0.950、Recall@1 0.45 → 0.65（见 docs 步骤⑦评测结论）
+SEARCH_STRATEGY = os.getenv("SEARCH_STRATEGY", "hybrid_rerank")
 
 # hard_filters 字段 → creators 表列（数值范围）
 RANGE_FIELDS = {
@@ -133,8 +139,33 @@ def vector_rank(semantic_query, creator_ids, top_k):
     return out
 
 
-def search(requirement_text, coop_mode=None, top_k=10):
+def _collect(hf, semantic_query, recall_k, use_filter=True):
+    """SQL 硬过滤 + 向量召回，返回 (候选达人列表, {creator_id: [命中块]})"""
+    candidates = sql_filter(hf if use_filter else {})
+    cids = [c["creator_id"] for c in candidates]
+    hits = vector_rank(semantic_query, cids, recall_k)
+    by_creator = {}
+    for h in hits:
+        by_creator.setdefault(h["creator_id"], []).append(h)
+    return candidates, by_creator
+
+
+def _by_distance(candidates, by_creator):
+    """向量检索的默认排序：最佳命中距离优先，其次粉丝数"""
+    def key(c):
+        hs = by_creator.get(c["creator_id"], [])
+        return (min(x["distance"] for x in hs) if hs else 1.0, -int(c["followers"] or 0))
+    return sorted(candidates, key=key)
+
+
+def search(requirement_text, coop_mode=None, top_k=10, strategy="hybrid"):
     """混合检索主入口。
+
+    strategy（供消融实验切换，见 docs/V2-查询流设计.md）：
+        vector_only    纯向量检索，跳过 SQL 硬过滤（基线）
+        hybrid         SQL 硬过滤 → 向量检索（L1-A，默认）
+        hybrid_rerank  在 hybrid 基础上加 CrossEncoder 重排
+        union          hybrid ∪ 纯向量（L1-C 双路并集）
 
     coop_mode: "placement" / "custom" / None（None=一次反问后用户不答，搁置该字段）
     """
@@ -146,26 +177,49 @@ def search(requirement_text, coop_mode=None, top_k=10):
     hf = parsed.get("hard_filters", {})
     semantic_query = parsed.get("semantic_query", "")
 
-    candidates = sql_filter(hf)
-    cids = [c["creator_id"] for c in candidates]
-    hits = vector_rank(semantic_query, cids, top_k)
+    if strategy == "vector_only":
+        cand, bc = _collect(hf, semantic_query, top_k, use_filter=False)
+        result = [{**c, "matches": bc.get(c["creator_id"], [])}
+                  for c in _by_distance(cand, bc)[:top_k]]
+        return {"parsed": parsed, "sql_count": None, "strategy": strategy, "result": result}
 
-    by_creator = {}
-    for h in hits:
-        by_creator.setdefault(h["creator_id"], []).append(h)
+    if strategy == "union":
+        c1, b1 = _collect(hf, semantic_query, top_k, use_filter=True)
+        c2, b2 = _collect(hf, semantic_query, top_k, use_filter=False)
+        merged = {c["creator_id"]: c for c in c1}
+        for c in c2:
+            merged.setdefault(c["creator_id"], c)
+        b = {**b2, **b1}
+        result = [{**c, "matches": b.get(c["creator_id"], [])}
+                  for c in _by_distance(list(merged.values()), b)[:top_k]]
+        return {"parsed": parsed, "sql_count": len(c1), "strategy": strategy, "result": result}
 
-    def sort_key(c):
-        hs = by_creator.get(c["creator_id"], [])
-        return (min(x["distance"] for x in hs) if hs else 1.0, -int(c["followers"] or 0))
+    # hybrid / hybrid_rerank
+    # RERANK_ENABLED=false 时 hybrid_rerank 退化为 hybrid——让开关能真正关掉 rerank
+    use_rerank = strategy == "hybrid_rerank" and rerank_enabled()
+    recall_k = max(top_k * 3, 30) if use_rerank else top_k
+    cand, bc = _collect(hf, semantic_query, recall_k, use_filter=True)
 
-    ranked = sorted(candidates, key=sort_key)
-    result = [{**c, "matches": by_creator.get(c["creator_id"], [])} for c in ranked]
+    if use_rerank:
+        docs = []
+        for c in cand:
+            hs = bc.get(c["creator_id"], [])
+            # 取该达人「最佳命中块」作为重排文本；无命中则退回画像文本
+            text = min(hs, key=lambda x: x["distance"])["chunk"] if hs else (c.get("profile_text") or "")
+            if text:
+                docs.append({"creator_id": c["creator_id"], "text": text})
+        ordered = rerank(semantic_query, docs, top_k=top_k)
+        cmap = {c["creator_id"]: c for c in cand}
+        result = [{**cmap[r["doc"]["creator_id"]],
+                   "matches": bc.get(r["doc"]["creator_id"], []),
+                   "rerank_score": r["rerank_score"]} for r in ordered]
+    else:
+        result = [{**c, "matches": bc.get(c["creator_id"], [])}
+                  for c in _by_distance(cand, bc)]
 
-    return {
-        "parsed": parsed,
-        "sql_count": len(candidates),
-        "result": result,
-    }
+    # strategy 字段如实反映实际生效的策略（rerank 被开关关闭时降级为 hybrid）
+    actual = "hybrid_rerank" if use_rerank else ("hybrid" if strategy == "hybrid_rerank" else strategy)
+    return {"parsed": parsed, "sql_count": len(cand), "strategy": actual, "result": result}
 
 
 def get_traits(creator_id):
@@ -181,7 +235,7 @@ def get_traits(creator_id):
         return [dict(zip(cols, row)) for row in cur.fetchall()]
 
 
-def build_reasons(requirement_text, coop_mode=None, top_k=10):
+def build_reasons(requirement_text, coop_mode=None, top_k=10, strategy=None):
     """步骤⑥：生成可溯源推荐理由。
 
     不做二次生成，只列事实条目：
@@ -189,8 +243,10 @@ def build_reasons(requirement_text, coop_mode=None, top_k=10):
       - trait：达人注意事项（绑定 trait_id / source_quote，critical 优先）
       - profile：结构化字段（硬过滤佐证）
     禁止伪精度评分（不输出"匹配度 82%"这类数字）。
+
+    strategy：默认取 SEARCH_STRATEGY（hybrid_rerank），线上路径启用 rerank。
     """
-    r = search(requirement_text, coop_mode, top_k)
+    r = search(requirement_text, coop_mode, top_k, strategy=strategy or SEARCH_STRATEGY)
     items = []
     for c in r["result"]:
         reasons = []

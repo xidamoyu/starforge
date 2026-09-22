@@ -38,7 +38,8 @@ def apply_schema(conn):
 
 
 def import_seed(conn):
-    data = json.loads((ROOT / "data" / "seed_data.json").read_text(encoding="utf-8"))
+    # utf-8-sig：兼容带 BOM 的文件（记事本 / Excel / PowerShell Out-File 导出的 JSON 常带 BOM）
+    data = json.loads((ROOT / "data" / "seed_data.json").read_text(encoding="utf-8-sig"))
 
     with conn.cursor() as cur:
         # --- brands ---
@@ -56,14 +57,15 @@ def import_seed(conn):
         for c in data["creators"]:
             cur.execute(
                 """INSERT INTO creators (
-                       creator_id, nickname, platform, followers, female_ratio,
+                       creator_id, nickname, platform, profile_url, followers, female_ratio,
                        age_18_24_ratio, age_25_34_ratio, avg_views, engagement_rate,
                        quote_embed_15s, quote_embed_30s, quote_embed_60s, quote_custom,
                        category, sub_categories, region, coop_models,
                        profile_text, content_style, past_brands, cooperation_history)
-                   VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
-                (c["creator_id"], c["nickname"], c["platform"], c["followers"],
-                 c["female_ratio"], c.get("age_18_24_ratio"), c.get("age_25_34_ratio"),
+                   VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
+                (c["creator_id"], c["nickname"], c["platform"], c.get("profile_url"),
+                 c["followers"], c["female_ratio"],
+                 c.get("age_18_24_ratio"), c.get("age_25_34_ratio"),
                  c.get("avg_views"), c.get("engagement_rate"),
                  c.get("quote_embed_15s"), c.get("quote_embed_30s"),
                  c.get("quote_embed_60s"), c.get("quote_custom"),
