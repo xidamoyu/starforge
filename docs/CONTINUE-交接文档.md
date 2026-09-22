@@ -69,10 +69,10 @@ C:\Users\Administrator\WorkBuddy\2026-09-21-10-45-59\starforge
 | — | 资产入库与运营成本设计 | ✅ **已完成（设计文档）** |
 | — | `party_traits` 补 `source_channel` / `source_ref` | ✅ **已完成（schema/init/文档三处同步）** |
 | ③ | 向量化入 ChromaDB | ✅ **已完成（170 条向量，检索验证通过）** |
-| ④ | 需求解析（Prompt 设计与验证） | ✅ **已完成（qwen-plus，澄清拦截）** |
+| ④ | 需求解析（Prompt 设计与验证） | ✅ **已完成（deepseek-v4-flash，澄清拦截）** |
 | ⑤ | 混合检索实现（L1-A：先 SQL 过滤后向量） | ✅ **已完成（4 样例验证通过）** |
-| ⑥ | 可溯源理由生成 | ⬜ 未开始 |
-| ⑦ | 评测集构建（30-50 条标注问题） | ⬜ 未开始 |
+| ⑥ | 可溯源理由生成 | ✅ **已完成（build_reasons，不做二次生成）** |
+| ⑦ | 评测集构建（分层评测） | ✅ **已完成（43 条，43/43 通过）** |
 | ⑧ | Dify 接入 | ⬜ 未开始（放最后） |
 
 **规则：步骤 ⑧（Dify）必须放最后。** 核心检索逻辑先在命令行调对，再接 Dify。原因见第 七 节坑 P-07。
@@ -93,6 +93,9 @@ C:\Users\Administrator\WorkBuddy\2026-09-21-10-45-59\starforge
 | `starforge/eval/test_parse.py` | 步骤④需求解析验证 | ✅ 已通过 |
 | `starforge/src/retrieval/hybrid_search.py` | 步骤⑤混合检索 L1-A | ✅ 已通过 |
 | `starforge/eval/test_hybrid.py` | 步骤⑤混合检索验证 | ✅ 已通过 |
+| `starforge/eval/testset.json` | 步骤⑦评测集（分层 43 条） | ✅ |
+| `starforge/eval/run_eval.py` | 步骤⑦评测脚本 | ✅ |
+| `starforge/eval/gen_creators.py` | 达人批量生成脚本 | ✅ |
 | `starforge/.env` | 真实配置（**不入库**，已在 .gitignore） | ✅ 已配置 PG |
 | `starforge/.env.example` | 配置模板 | ✅ |
 | `starforge/requirements.txt` | 依赖清单 | ✅ |
@@ -110,13 +113,13 @@ C:\Users\Administrator\WorkBuddy\2026-09-21-10-45-59\starforge
 
 ```
 brands        :  8 行
-creators      : 20 行
+creators      : 89 行（18 个垂类，含真实达人昵称，数值为估算）
 deals         : 17 行
 party_traits  : 30 行（全部 verified=TRUE）
 deal_reviews  : 18 行（复盘种子数据，reviewer_role 含 agency/brand/creator）
 ```
 
-ChromaDB 向量库：170 条（creators 80 + deals 34 + deal_reviews 18 + brands 8 + party_traits 30）
+ChromaDB 向量库：446 条（creators 356 + deals 34 + deal_reviews 18 + brands 8 + party_traits 30）
 
 `party_traits` 分布：
 - severity：`warning` 14 条 / `info` 8 条 / `critical` 8 条

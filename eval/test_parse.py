@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.core.llm import parse_requirement  # noqa: E402
+from src.core.llm import ensure_budget, extract_budget, parse_requirement  # noqa: E402
 
 CASES = [
     "新出的氨基酸洁面，想找成分党类的博主做真实测评，重点讲温和不刺激，面向学生党。预算控制在6000以内。",
@@ -25,7 +25,34 @@ CASES = [
 ]
 
 
+def test_budget_fallback():
+    """预算兜底单元测试（确定性，不调 LLM）"""
+    for text, expected in [
+        ("预算控制在6000以内", 6000),
+        ("预算1万", 10000),
+        ("预算50万左右", 500000),
+        ("总预算3千", 3000),
+        ("帮我找个达人", None),
+    ]:
+        got = extract_budget(text)
+        assert got == expected, f"extract_budget({text!r}) = {got}, 期望 {expected}"
+
+    p = ensure_budget({"hard_filters": {"category": ["美妆"]}}, "预算控制在6000以内")
+    assert p["hard_filters"]["quote_embed_15s"] == {"max": 6000}, p
+
+    p2 = ensure_budget({"hard_filters": {"quote_embed_30s": {"max": 80000}}}, "预算控制在6000以内")
+    assert "quote_embed_15s" not in p2["hard_filters"], p2
+    assert p2["hard_filters"]["quote_embed_30s"] == {"max": 80000}, p2
+
+    p3 = ensure_budget({"hard_filters": {"category": ["美妆"]}}, "帮我找个达人")
+    assert "quote_embed_15s" not in p3["hard_filters"], p3
+
+    print("[OK] 预算兜底单元测试 7 项全部通过")
+
+
 def main():
+    test_budget_fallback()
+    print()
     for i, c in enumerate(CASES, 1):
         print("=" * 78)
         print(f"样例{i}: {c}")

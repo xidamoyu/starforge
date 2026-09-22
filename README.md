@@ -34,7 +34,7 @@
 | 层 | 选型 | 说明 |
 |---|---|---|
 | Embedding | Ollama（本地） | **已定：`bge-m3`**（2026-09-21 实测通过，维度 1024，GPU 模式无 NaN）。**模型已定死不再更换**，换模型需重建全库 |
-| 主模型 | DashScope Qwen（OpenAI 兼容） | 意图识别、需求解析、理由生成。云端 API 可随时切换 |
+| 主模型 | DashScope DeepSeek（OpenAI 兼容） | 意图识别、需求解析、理由生成。云端 API 可随时切换 |
 | 关系库 | PostgreSQL 18 | 结构化过滤 |
 | 向量库 | ChromaDB | 语义检索 |
 | 编排 | Dify | 外壳与界面（**放最后接入**，Dify 做不了混合检索与可溯源输出） |
@@ -46,7 +46,7 @@
 ```
 starforge/
 ├── data/
-│   ├── seed_data.json      # 种子数据（虚构，8甲方/20达人/17商单/18条复盘/30条trait）
+│   ├── seed_data.json      # 种子数据（8甲方/89达人/17商单/18条复盘/30条trait）
 │   └── chroma/             # 向量库（运行时生成，不入库）
 ├── src/
 │   ├── db/

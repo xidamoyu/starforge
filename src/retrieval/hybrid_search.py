@@ -166,3 +166,61 @@ def search(requirement_text, coop_mode=None, top_k=10):
         "sql_count": len(candidates),
         "result": result,
     }
+
+
+def get_traits(creator_id):
+    """查达人已验证注意事项，按 critical > warning > info 排序"""
+    with get_conn() as conn, conn.cursor() as cur:
+        cur.execute("""
+            SELECT trait_id, trait_category, trait_content, severity, source_quote
+            FROM party_traits
+            WHERE party_type = 'creator' AND party_id = %s AND verified = TRUE
+            ORDER BY CASE severity WHEN 'critical' THEN 0 WHEN 'warning' THEN 1 ELSE 2 END, trait_id
+        """, (creator_id,))
+        cols = [d[0] for d in cur.description]
+        return [dict(zip(cols, row)) for row in cur.fetchall()]
+
+
+def build_reasons(requirement_text, coop_mode=None, top_k=10):
+    """步骤⑥：生成可溯源推荐理由。
+
+    不做二次生成，只列事实条目：
+      - match：语义命中的字段原文（绑定 field 名，可回溯到 creators 文本字段）
+      - trait：达人注意事项（绑定 trait_id / source_quote，critical 优先）
+      - profile：结构化字段（硬过滤佐证）
+    禁止伪精度评分（不输出"匹配度 82%"这类数字）。
+    """
+    r = search(requirement_text, coop_mode, top_k)
+    items = []
+    for c in r["result"]:
+        reasons = []
+        for m in c["matches"]:
+            reasons.append({"type": "match", "field": m["field"], "quote": m["chunk"]})
+        for t in get_traits(c["creator_id"]):
+            reasons.append({
+                "type": "trait",
+                "severity": t["severity"],
+                "category": t["trait_category"],
+                "content": t["trait_content"],
+                "source_quote": t["source_quote"],
+                "trait_id": t["trait_id"],
+            })
+        profile = {
+            "followers": c["followers"],
+            "female_ratio": c["female_ratio"],
+            "quote_embed_30s": c["quote_embed_30s"],
+            "quote_custom": c["quote_custom"],
+            "category": c["category"],
+            "platform": c["platform"],
+        }
+        items.append({
+            "creator_id": c["creator_id"],
+            "nickname": c["nickname"],
+            "profile": profile,
+            "reasons": reasons,
+        })
+    return {
+        "parsed": r["parsed"],
+        "sql_count": r["sql_count"],
+        "items": items,
+    }

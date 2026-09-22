@@ -1,11 +1,10 @@
 {
   "_meta": {
     "description": "StarForge 种子数据 - 虚构演示数据，用于开发与评测",
-    "note": "所有品牌名、达人名均为虚构，不涉及真实商业信息",
+    "note": "含真实达人昵称；粉丝数/报价/占比均为估算值，仅用于演示与评测。",
     "created": "2026-09-21",
     "design_intent": "刻意设置边界样本（如女性占比0.69 vs 0.70），用于检验检索精度"
   },
-
   "brands": [
     {
       "brand_id": "B001",
@@ -80,7 +79,6 @@
       "cooperation_notes": "香薰与居家布艺，客单价150-350元。瞄准25-38岁注重生活仪式感的女性。偏好氛围感强、画面精美的内容。预算中等，对发布时间有季节性要求（换季节点）。"
     }
   ],
-
   "creators": [
     {
       "creator_id": "C001",
@@ -97,9 +95,16 @@
       "quote_embed_60s": 8200,
       "quote_custom": 9000,
       "category": "美妆",
-      "sub_categories": ["平价护肤", "学生党", "敏感肌"],
+      "sub_categories": [
+        "平价护肤",
+        "学生党",
+        "敏感肌"
+      ],
       "region": "杭州",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "以平价护肤测评为主的成分党博主，粉丝以在校学生和初入职场女性为主。内容风格真实犀利，擅长拆解成分表，对产品缺点直言不讳。粉丝信任度高，评论区互动活跃。",
       "content_style": "真实测评、成分拆解、横向对比，语速快，接地气，不做过度美化",
       "past_brands": "素汐实验室、极简食研、多家小众国货护肤品牌",
@@ -120,9 +125,16 @@
       "quote_embed_60s": 18000,
       "quote_custom": 22000,
       "category": "美妆",
-      "sub_categories": ["彩妆", "仿妆", "妆教"],
+      "sub_categories": [
+        "彩妆",
+        "仿妆",
+        "妆教"
+      ],
       "region": "上海",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "专业彩妆师出身，主攻妆容教程和仿妆内容。粉丝以25-34岁都市女性为主，消费能力强。画面质感在同类博主中属于上乘，成片几乎不需要二次调色。",
       "content_style": "精致妆教、氛围感强、视觉高级，镜头语言成熟",
       "past_brands": "拾光研究所、云织服饰、多个轻奢彩妆品牌",
@@ -143,9 +155,16 @@
       "quote_embed_60s": 31000,
       "quote_custom": 38000,
       "category": "美妆",
-      "sub_categories": ["成分分析", "护肤科普", "功效验证"],
+      "sub_categories": [
+        "成分分析",
+        "护肤科普",
+        "功效验证"
+      ],
       "region": "北京",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "化妆品配方师背景，以硬核成分科普著称。粉丝年龄偏成熟，多为关注护肤功效的理性消费者。内容专业度极高，但节奏偏慢，不适合追求爆量的品牌。",
       "content_style": "深度科普、数据支撑、理性克制，信息密度高",
       "past_brands": "素汐实验室、拾光研究所、多家功效护肤品牌",
@@ -166,9 +185,16 @@
       "quote_embed_60s": 7000,
       "quote_custom": 7500,
       "category": "母婴",
-      "sub_categories": ["辅食", "育儿经验", "宝妈日常"],
+      "sub_categories": [
+        "辅食",
+        "育儿经验",
+        "宝妈日常"
+      ],
       "region": "成都",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "两个孩子的妈妈，分享辅食制作与育儿日常。粉丝高度垂直，几乎全是25-35岁新手妈妈。内容真实朴素，互动率在同类中偏高，粉丝黏性强。",
       "content_style": "生活化记录、实拍辅食过程、口播自然不做作",
       "past_brands": "南禾母婴、晨野宠物、多个母婴用品品牌",
@@ -189,9 +215,16 @@
       "quote_embed_60s": 40000,
       "quote_custom": 48000,
       "category": "母婴",
-      "sub_categories": ["辅食教程", "宝宝餐", "营养搭配"],
+      "sub_categories": [
+        "辅食教程",
+        "宝宝餐",
+        "营养搭配"
+      ],
       "region": "广州",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "专注婴幼儿辅食教程的头部达人，内容体系化程度高。粉丝以25-34岁妈妈为主，覆盖一二线城市。视频制作精良，有固定拍摄团队。",
       "content_style": "教程式、画面干净、步骤清晰，节奏舒适",
       "past_brands": "南禾母婴、沐野家居、多个母婴头部品牌",
@@ -212,9 +245,16 @@
       "quote_embed_60s": 6000,
       "quote_custom": 6500,
       "category": "食品",
-      "sub_categories": ["减脂餐", "代餐测评", "健身饮食"],
+      "sub_categories": [
+        "减脂餐",
+        "代餐测评",
+        "健身饮食"
+      ],
       "region": "深圳",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "健身教练转型的减脂饮食博主，粉丝以18-28岁健身减脂人群为主，男女比例相对均衡。内容实操性强，互动率是所有达人中最高的一档。",
       "content_style": "实操演示、热量计算、真实体测数据对比，干货型",
       "past_brands": "极简食研、多个健身补剂品牌",
@@ -235,9 +275,16 @@
       "quote_embed_60s": 20000,
       "quote_custom": 24000,
       "category": "食品",
-      "sub_categories": ["美食探访", "速食测评", "夜宵文化"],
+      "sub_categories": [
+        "美食探访",
+        "速食测评",
+        "夜宵文化"
+      ],
       "region": "长沙",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "美食探访与速食测评博主，B站粉丝活跃度高。受众偏年轻，男女比例接近。内容叙事性强，擅长把一个产品讲出故事感。",
       "content_style": "叙事化、有梗、配乐用心，长视频为主",
       "past_brands": "极简食研、多个速食与饮料品牌",
@@ -258,9 +305,16 @@
       "quote_embed_60s": 48000,
       "quote_custom": 58000,
       "category": "3C数码",
-      "sub_categories": ["智能穿戴", "数码配件", "参数评测"],
+      "sub_categories": [
+        "智能穿戴",
+        "数码配件",
+        "参数评测"
+      ],
       "region": "北京",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "数码评测头部博主，粉丝以22-35岁男性科技爱好者为主。参数讲解专业，拆机评测是招牌内容。粉丝购买决策受其影响明显。",
       "content_style": "硬核评测、拆机演示、数据对比，专业理性",
       "past_brands": "北屿数码、多个数码大厂品牌",
@@ -281,9 +335,16 @@
       "quote_embed_60s": 5400,
       "quote_custom": 6000,
       "category": "3C数码",
-      "sub_categories": ["桌面好物", "办公效率", "职场数码"],
+      "sub_categories": [
+        "桌面好物",
+        "办公效率",
+        "职场数码"
+      ],
       "region": "上海",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "职场办公好物分享博主，粉丝以25-34岁一二线城市职场人群为主。内容偏生活方式，把数码产品和职场场景结合得很好，不是硬核路线。",
       "content_style": "场景化、职场共鸣、精致摆拍，图文与视频并重",
       "past_brands": "北屿数码、沐野家居、多个办公用品品牌",
@@ -304,9 +365,16 @@
       "quote_embed_60s": 15000,
       "quote_custom": 18000,
       "category": "服饰",
-      "sub_categories": ["新中式", "穿搭", "国风"],
+      "sub_categories": [
+        "新中式",
+        "穿搭",
+        "国风"
+      ],
       "region": "苏州",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "新中式穿搭博主，粉丝以25-40岁注重文化质感与审美的女性为主。画面极具东方美学风格，是小红书新中式赛道的代表账号之一。",
       "content_style": "东方美学、氛围感极强、图文精美，讲究构图与光线",
       "past_brands": "云织服饰、沐野家居、多个国风品牌",
@@ -327,9 +395,16 @@
       "quote_embed_60s": 28000,
       "quote_custom": 34000,
       "category": "服饰",
-      "sub_categories": ["男装", "商务休闲", "职场穿搭"],
+      "sub_categories": [
+        "男装",
+        "商务休闲",
+        "职场穿搭"
+      ],
       "region": "天津",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "男装穿搭博主，粉丝男性占比较高的同时也有大量女性粉丝（为伴侣选购）。内容实用性强，主打性价比与职场场景。",
       "content_style": "实用向、场景化搭配、价格透明，节奏明快",
       "past_brands": "云织服饰、多个男装品牌",
@@ -350,9 +425,16 @@
       "quote_embed_60s": 9000,
       "quote_custom": 10500,
       "category": "宠物",
-      "sub_categories": ["猫咪日常", "宠物用品测评", "养猫经验"],
+      "sub_categories": [
+        "猫咪日常",
+        "宠物用品测评",
+        "养猫经验"
+      ],
       "region": "南京",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "养猫日常分享博主，粉丝以18-34岁城市养猫青年女性为主。内容真实温馨，两只布偶猫是账号的核心IP，出镜率极高。",
       "content_style": "温馨日常、宠物自然出镜、口播轻量，治愈系",
       "past_brands": "晨野宠物、多个宠物用品品牌",
@@ -373,9 +455,16 @@
       "quote_embed_60s": 16000,
       "quote_custom": 19500,
       "category": "宠物",
-      "sub_categories": ["狗狗训练", "宠物零食", "养狗经验"],
+      "sub_categories": [
+        "狗狗训练",
+        "宠物零食",
+        "养狗经验"
+      ],
       "region": "武汉",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "养狗经验分享博主，两只边牧是账号主角。内容含训练技巧，实用性强。粉丝男女比例较均衡，城市养狗人群为主。",
       "content_style": "训练教学、日常记录、互动性内容，亲和力强",
       "past_brands": "晨野宠物、多个宠物食品品牌",
@@ -396,9 +485,16 @@
       "quote_embed_60s": 6500,
       "quote_custom": 7200,
       "category": "家居",
-      "sub_categories": ["香薰", "居家布艺", "生活美学"],
+      "sub_categories": [
+        "香薰",
+        "居家布艺",
+        "生活美学"
+      ],
       "region": "厦门",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "家居生活美学博主，聚焦香薰与居家软装。粉丝以25-38岁注重生活仪式感的女性为主，对视觉质感要求高。",
       "content_style": "氛围感、慢节奏、画面精美，图文表现力强",
       "past_brands": "沐野家居、云织服饰、多个家居品牌",
@@ -419,9 +515,16 @@
       "quote_embed_60s": 12800,
       "quote_custom": 15000,
       "category": "家居",
-      "sub_categories": ["极简生活", "收纳", "断舍离"],
+      "sub_categories": [
+        "极简生活",
+        "收纳",
+        "断舍离"
+      ],
       "region": "南京",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "极简生活方式博主，内容涵盖收纳整理与消费观分享。B站粉丝黏性高，受众偏理性消费人群，男女比例相对均衡。",
       "content_style": "生活哲学、整理过程、理性消费倡导，调性克制",
       "past_brands": "沐野家居、极简食研、北屿数码",
@@ -442,9 +545,16 @@
       "quote_embed_60s": 4200,
       "quote_custom": 4800,
       "category": "美妆",
-      "sub_categories": ["学生党", "平价彩妆", "好物分享"],
+      "sub_categories": [
+        "学生党",
+        "平价彩妆",
+        "好物分享"
+      ],
       "region": "郑州",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "大学生平价好物分享博主，粉丝以18-24岁学生党为主。内容活泼亲切，互动率极高（达人中最高），粉丝忠诚度好。",
       "content_style": "活泼亲切、好物清单、学生视角，节奏轻快",
       "past_brands": "素汐实验室、多个平价美妆品牌",
@@ -465,9 +575,16 @@
       "quote_embed_60s": 24000,
       "quote_custom": 29000,
       "category": "美妆",
-      "sub_categories": ["护肤", "抗老", "轻熟龄"],
+      "sub_categories": [
+        "护肤",
+        "抗老",
+        "轻熟龄"
+      ],
       "region": "上海",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "轻熟龄护肤博主，粉丝以25-34岁有护肤预算的都市女性为主。内容专业但不晦涩，兼顾专业性与可读性，是小红书护肤赛道的腰部头部账号。",
       "content_style": "专业解读、图文并茂、逻辑清晰，兼顾通俗性",
       "past_brands": "拾光研究所、多家功效护肤品牌",
@@ -488,9 +605,16 @@
       "quote_embed_60s": 36000,
       "quote_custom": 44000,
       "category": "3C数码",
-      "sub_categories": ["横向评测", "拆机", "数据实测"],
+      "sub_categories": [
+        "横向评测",
+        "拆机",
+        "数据实测"
+      ],
       "region": "深圳",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "团队化运作的硬核测评账号，主打横向评测与实测数据。粉丝以22-35岁男性为主，决策影响力强。有自己的实验室设备。",
       "content_style": "实验室水准、数据可视化、客观中立，制作精良",
       "past_brands": "北屿数码、多个数码大厂",
@@ -511,9 +635,16 @@
       "quote_embed_60s": 2800,
       "quote_custom": 3200,
       "category": "食品",
-      "sub_categories": ["零食分享", "便利店好物", "日常vlog"],
+      "sub_categories": [
+        "零食分享",
+        "便利店好物",
+        "日常vlog"
+      ],
       "region": "合肥",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "日常向零食分享博主，粉丝以18-24岁年轻群体为主。虽然粉丝量小，但互动率是最高的（0.095），属于典型的高黏性小号。",
       "content_style": "真实日常、零食开箱、亲和力强，轻量化内容",
       "past_brands": "极简食研、多个零食品牌",
@@ -534,16 +665,1976 @@
       "quote_embed_60s": 29000,
       "quote_custom": 35000,
       "category": "服饰",
-      "sub_categories": ["日常穿搭", "通勤", "轻熟风"],
+      "sub_categories": [
+        "日常穿搭",
+        "通勤",
+        "轻熟风"
+      ],
       "region": "北京",
-      "coop_models": ["placement", "custom"],
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
       "profile_text": "通勤穿搭博主，粉丝以25-34岁职场女性为主，消费力强。内容实用度高，主打「上班穿什么」，是小红书通勤赛道的头部账号之一。",
       "content_style": "实穿主义、通勤场景、搭配逻辑清晰，专业度高",
       "past_brands": "云织服饰、多个女装品牌",
       "cooperation_history": "与云织服饰合作3单。她的内容转化率在小红书服饰赛道中属于优秀水平。对衣服版型很挑剔，如果版型不好会直接指出，品牌方需确保样品质量。她本人有自己的工作室，响应速度快。"
+    },
+    {
+      "creator_id": "C021",
+      "nickname": "老司机阿凯",
+      "platform": "抖音",
+      "followers": 185000,
+      "female_ratio": 0.18,
+      "age_18_24_ratio": 0.22,
+      "age_25_34_ratio": 0.48,
+      "avg_views": 72000,
+      "engagement_rate": 0.041,
+      "quote_embed_15s": 9000,
+      "quote_embed_30s": 13500,
+      "quote_embed_60s": 20000,
+      "quote_custom": 25000,
+      "category": "汽车",
+      "sub_categories": [
+        "新车评测",
+        "用车知识",
+        "购车导购"
+      ],
+      "region": "广州",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "资深汽车媒体人转型博主，主攻新车评测与购车导购。粉丝以25-40岁男性准车主为主，购车决策影响力强。",
+      "content_style": "实测数据、试驾体验、横向对比，专业客观",
+      "past_brands": "多家汽车品牌、汽车后市场用品",
+      "cooperation_history": "与两个自主品牌合作过3次试驾植入。对车型缺点直言不讳，品牌方需接受客观评价。要求试驾车辆手续齐全，不接受静态摆拍评测。"
+    },
+    {
+      "creator_id": "C022",
+      "nickname": "游戏夜班车",
+      "platform": "B站",
+      "followers": 356000,
+      "female_ratio": 0.25,
+      "age_18_24_ratio": 0.45,
+      "age_25_34_ratio": 0.38,
+      "avg_views": 156000,
+      "engagement_rate": 0.052,
+      "quote_embed_15s": 17000,
+      "quote_embed_30s": 26000,
+      "quote_embed_60s": 40000,
+      "quote_custom": 50000,
+      "category": "游戏",
+      "sub_categories": [
+        "游戏实况",
+        "新游评测",
+        "电竞"
+      ],
+      "region": "上海",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "主机游戏实况与评测博主，B站游戏区腰部头部。粉丝以18-30岁男性玩家为主，内容有梗有深度。",
+      "content_style": "实况解说、梗密集、深度评测，节奏快",
+      "past_brands": "多个游戏厂商、外设品牌",
+      "cooperation_history": "与多家游戏厂商合作新游推广。坚持真实体验后评价，不接受只念稿不体验的推广。曾有厂商要求只说优点，被拒绝。"
+    },
+    {
+      "creator_id": "C023",
+      "nickname": "知了老师",
+      "platform": "抖音",
+      "followers": 128000,
+      "female_ratio": 0.55,
+      "age_18_24_ratio": 0.35,
+      "age_25_34_ratio": 0.42,
+      "avg_views": 48000,
+      "engagement_rate": 0.046,
+      "quote_embed_15s": 6000,
+      "quote_embed_30s": 9000,
+      "quote_embed_60s": 14000,
+      "quote_custom": 16000,
+      "category": "教育",
+      "sub_categories": [
+        "知识科普",
+        "学习方法",
+        "职场技能"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "高校讲师出身的知识科普博主，主攻学习方法与职场技能。粉丝以大学生和初入职场人群为主，信任度高。",
+      "content_style": "体系化讲解、逻辑清晰、实用性强",
+      "past_brands": "在线教育平台、学习工具",
+      "cooperation_history": "与教育平台合作2次课程推广。内容要求严谨，所有知识点需有出处。不接受夸大课程效果，需真实体验课程后再推荐。"
+    },
+    {
+      "creator_id": "C024",
+      "nickname": "小满去旅行",
+      "platform": "小红书",
+      "followers": 92000,
+      "female_ratio": 0.62,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.5,
+      "avg_views": 35000,
+      "engagement_rate": 0.055,
+      "quote_embed_15s": 4200,
+      "quote_embed_30s": 6500,
+      "quote_embed_60s": 9500,
+      "quote_custom": 11000,
+      "category": "旅游",
+      "sub_categories": [
+        "旅行攻略",
+        "小众目的地",
+        "住宿体验"
+      ],
+      "region": "成都",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "自由行攻略博主，主攻小众目的地与高性价比行程。粉丝以25-35岁年轻女性为主，攻略收藏率高。",
+      "content_style": "攻略详实、画面清新、实用打卡信息",
+      "past_brands": "酒店、民宿、旅行平台",
+      "cooperation_history": "与多家民宿和旅行平台合作。坚持真实入住体验后推荐，不接受照骗式宣传。对行程真实性要求高，需提供可核验的信息。"
+    },
+    {
+      "creator_id": "C025",
+      "nickname": "铁馆老张",
+      "platform": "抖音",
+      "followers": 215000,
+      "female_ratio": 0.38,
+      "age_18_24_ratio": 0.33,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 86000,
+      "engagement_rate": 0.049,
+      "quote_embed_15s": 11000,
+      "quote_embed_30s": 16500,
+      "quote_embed_60s": 25000,
+      "quote_custom": 30000,
+      "category": "健身",
+      "sub_categories": [
+        "健身教学",
+        "减脂增肌",
+        "营养"
+      ],
+      "region": "深圳",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "职业健身教练转型博主，主攻科学训练与减脂增肌。粉丝以18-35岁健身人群为主，男女比例均衡。",
+      "content_style": "动作示范标准、数据支撑、干货密度高",
+      "past_brands": "健身补剂、运动装备",
+      "cooperation_history": "与补剂和装备品牌合作多次。对产品成分和效果要求严格，不接受夸大宣传。合作前要求提供产品检测报告。"
+    },
+    {
+      "creator_id": "C026",
+      "nickname": "养生小满",
+      "platform": "小红书",
+      "followers": 78000,
+      "female_ratio": 0.7,
+      "age_18_24_ratio": 0.2,
+      "age_25_34_ratio": 0.48,
+      "avg_views": 29000,
+      "engagement_rate": 0.058,
+      "quote_embed_15s": 3500,
+      "quote_embed_30s": 5200,
+      "quote_embed_60s": 7800,
+      "quote_custom": 9000,
+      "category": "健康",
+      "sub_categories": [
+        "养生",
+        "营养健康",
+        "作息"
+      ],
+      "region": "杭州",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健康养生博主，主攻营养搭配与科学作息。粉丝以25-40岁关注健康的女性为主，信任度高。",
+      "content_style": "温和科普、生活化建议、注重科学性",
+      "past_brands": "保健品、健康食品",
+      "cooperation_history": "对健康类产品极其谨慎，所有推荐需有权威依据。拒绝过多个夸大功效的保健品合作。合作前需提供资质与检测报告。"
+    },
+    {
+      "creator_id": "C027",
+      "nickname": "钱多多说财",
+      "platform": "B站",
+      "followers": 268000,
+      "female_ratio": 0.28,
+      "age_18_24_ratio": 0.25,
+      "age_25_34_ratio": 0.52,
+      "avg_views": 98000,
+      "engagement_rate": 0.038,
+      "quote_embed_15s": 13000,
+      "quote_embed_30s": 19500,
+      "quote_embed_60s": 29000,
+      "quote_custom": 35000,
+      "category": "财经",
+      "sub_categories": [
+        "财经解读",
+        "理财知识",
+        "宏观经济"
+      ],
+      "region": "上海",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "财经内容博主，主攻宏观经济解读与理财知识。粉丝以25-45岁有理财需求的男性为主，专业性强。",
+      "content_style": "数据详实、逻辑严密、通俗解读专业内容",
+      "past_brands": "金融产品、财经资讯平台",
+      "cooperation_history": "对金融类合作极其谨慎，所有内容需合规。不接受未经审核的理财收益宣传。合作前需法务审核话术。"
+    },
+    {
+      "creator_id": "C028",
+      "nickname": "好吃嘴探店",
+      "platform": "抖音",
+      "followers": 152000,
+      "female_ratio": 0.58,
+      "age_18_24_ratio": 0.36,
+      "age_25_34_ratio": 0.44,
+      "avg_views": 61000,
+      "engagement_rate": 0.053,
+      "quote_embed_15s": 7500,
+      "quote_embed_30s": 11200,
+      "quote_embed_60s": 16800,
+      "quote_custom": 20000,
+      "category": "本地生活",
+      "sub_categories": [
+        "探店",
+        "餐饮",
+        "本地玩乐"
+      ],
+      "region": "重庆",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "本地生活探店博主，主攻餐饮与本地玩乐。粉丝以同城18-35岁人群为主，到店转化能力强。",
+      "content_style": "真实探店、口味直白、接地气",
+      "past_brands": "餐饮品牌、本地生活平台",
+      "cooperation_history": "与多家餐饮品牌合作探店。坚持真实口味评价，不好吃会直接说。品牌方需接受真实反馈，拒绝摆拍式探店。"
+    },
+    {
+      "creator_id": "C029",
+      "nickname": "书页之间",
+      "platform": "小红书",
+      "followers": 62000,
+      "female_ratio": 0.66,
+      "age_18_24_ratio": 0.28,
+      "age_25_34_ratio": 0.48,
+      "avg_views": 24000,
+      "engagement_rate": 0.061,
+      "quote_embed_15s": 3000,
+      "quote_embed_30s": 4500,
+      "quote_embed_60s": 6800,
+      "quote_custom": 8000,
+      "category": "图书文化",
+      "sub_categories": [
+        "读书分享",
+        "书单推荐",
+        "文学"
+      ],
+      "region": "南京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "读书分享博主，主攻书单推荐与文学解读。粉丝以20-35岁爱读书的年轻女性为主，品味稳定。",
+      "content_style": "文字优美、解读有深度、书单实用",
+      "past_brands": "出版社、图书电商",
+      "cooperation_history": "与多家出版社合作新书推广。坚持读完再推荐，不接受只拍封面不读书的推广。书评真实，好坏都说。"
+    },
+    {
+      "creator_id": "C030",
+      "nickname": "次元壁观察员",
+      "platform": "B站",
+      "followers": 402000,
+      "female_ratio": 0.32,
+      "age_18_24_ratio": 0.5,
+      "age_25_34_ratio": 0.35,
+      "avg_views": 168000,
+      "engagement_rate": 0.057,
+      "quote_embed_15s": 20000,
+      "quote_embed_30s": 30000,
+      "quote_embed_60s": 45000,
+      "quote_custom": 55000,
+      "category": "二次元",
+      "sub_categories": [
+        "动漫解说",
+        "新番点评",
+        "二次元文化"
+      ],
+      "region": "武汉",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "动漫解说与二次元文化博主，B站二次元区头部。粉丝以18-28岁二次元爱好者为主，粘性极强。",
+      "content_style": "深度解说、梗文化、制作精良",
+      "past_brands": "动漫周边、游戏厂商、二次元平台",
+      "cooperation_history": "与动漫周边和游戏厂商合作多次。对作品内容要求高，不接受无感推荐。粉丝对恰饭敏感，需软性融入内容。"
+    },
+    {
+      "creator_id": "C031",
+      "nickname": "晚风情感电台",
+      "platform": "抖音",
+      "followers": 508000,
+      "female_ratio": 0.72,
+      "age_18_24_ratio": 0.38,
+      "age_25_34_ratio": 0.42,
+      "avg_views": 186000,
+      "engagement_rate": 0.044,
+      "quote_embed_15s": 25000,
+      "quote_embed_30s": 37000,
+      "quote_embed_60s": 55000,
+      "quote_custom": 68000,
+      "category": "情感剧情",
+      "sub_categories": [
+        "情感故事",
+        "剧情演绎",
+        "心灵成长"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "情感剧情博主，以剧情演绎方式讲述情感故事。粉丝以18-35岁女性为主，情绪共鸣强，互动率高。",
+      "content_style": "剧情演绎、情绪饱满、共鸣感强",
+      "past_brands": "美妆、饰品、情感类APP",
+      "cooperation_history": "与多个品牌合作剧情植入。要求植入自然融入剧情，不接受生硬口播。对剧本有把控，需提前沟通剧情走向。"
+    },
+    {
+      "creator_id": "C032",
+      "nickname": "年糕妈妈",
+      "platform": "小红书",
+      "followers": 5000000,
+      "female_ratio": 0.88,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 46523,
+      "quote_embed_30s": 84589,
+      "quote_embed_60s": 126883,
+      "quote_custom": 152260,
+      "category": "母婴",
+      "sub_categories": [
+        "母婴"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "母婴领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个母婴相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C033",
+      "nickname": "崔玉涛育学园",
+      "platform": "抖音",
+      "followers": 6000000,
+      "female_ratio": 0.88,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2400000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 53341,
+      "quote_embed_30s": 96984,
+      "quote_embed_60s": 145476,
+      "quote_custom": 174571,
+      "category": "母婴",
+      "sub_categories": [
+        "母婴"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "母婴领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个母婴相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C034",
+      "nickname": "小小包麻麻",
+      "platform": "小红书",
+      "followers": 3200000,
+      "female_ratio": 0.88,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1280000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 33289,
+      "quote_embed_30s": 60527,
+      "quote_embed_60s": 90790,
+      "quote_custom": 108948,
+      "category": "母婴",
+      "sub_categories": [
+        "母婴"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "母婴领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个母婴相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C035",
+      "nickname": "密子君",
+      "platform": "抖音",
+      "followers": 8000000,
+      "female_ratio": 0.55,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "食品",
+      "sub_categories": [
+        "食品"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "食品领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个食品相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C036",
+      "nickname": "蜀中桃子姐",
+      "platform": "抖音",
+      "followers": 10000000,
+      "female_ratio": 0.55,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 4000000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 78244,
+      "quote_embed_30s": 142262,
+      "quote_embed_60s": 213393,
+      "quote_custom": 256071,
+      "category": "食品",
+      "sub_categories": [
+        "食品"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "食品领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个食品相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C037",
+      "nickname": "影视飓风",
+      "platform": "B站",
+      "followers": 7000000,
+      "female_ratio": 0.25,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2800000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 59879,
+      "quote_embed_30s": 108871,
+      "quote_embed_60s": 163306,
+      "quote_custom": 195967,
+      "category": "3C数码",
+      "sub_categories": [
+        "3C数码"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "3C数码领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个3C数码相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C038",
+      "nickname": "钟文泽",
+      "platform": "B站",
+      "followers": 1500000,
+      "female_ratio": 0.25,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 600000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 18858,
+      "quote_embed_30s": 34289,
+      "quote_embed_60s": 51433,
+      "quote_custom": 61720,
+      "category": "3C数码",
+      "sub_categories": [
+        "3C数码"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "3C数码领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个3C数码相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C039",
+      "nickname": "程十安",
+      "platform": "小红书",
+      "followers": 6000000,
+      "female_ratio": 0.8,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2400000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 53341,
+      "quote_embed_30s": 96984,
+      "quote_embed_60s": 145476,
+      "quote_custom": 174571,
+      "category": "服饰",
+      "sub_categories": [
+        "服饰"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "服饰领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个服饰相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C040",
+      "nickname": "一枝南南",
+      "platform": "小红书",
+      "followers": 4000000,
+      "female_ratio": 0.8,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1600000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 39354,
+      "quote_embed_30s": 71554,
+      "quote_embed_60s": 107331,
+      "quote_custom": 128797,
+      "category": "服饰",
+      "sub_categories": [
+        "服饰"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "服饰领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个服饰相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C041",
+      "nickname": "尿尿是只猫",
+      "platform": "抖音",
+      "followers": 6000000,
+      "female_ratio": 0.75,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2400000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 53341,
+      "quote_embed_30s": 96984,
+      "quote_embed_60s": 145476,
+      "quote_custom": 174571,
+      "category": "宠物",
+      "sub_categories": [
+        "宠物"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "宠物领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个宠物相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C042",
+      "nickname": "花花与三猫",
+      "platform": "B站",
+      "followers": 5000000,
+      "female_ratio": 0.75,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 46523,
+      "quote_embed_30s": 84589,
+      "quote_embed_60s": 126883,
+      "quote_custom": 152260,
+      "category": "宠物",
+      "sub_categories": [
+        "宠物"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "宠物领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个宠物相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C043",
+      "nickname": "在下铁头阿彪",
+      "platform": "B站",
+      "followers": 2000000,
+      "female_ratio": 0.75,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 800000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 23400,
+      "quote_embed_30s": 42546,
+      "quote_embed_60s": 63819,
+      "quote_custom": 76582,
+      "category": "宠物",
+      "sub_categories": [
+        "宠物"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "宠物领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个宠物相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C044",
+      "nickname": "住范儿",
+      "platform": "抖音",
+      "followers": 3000000,
+      "female_ratio": 0.7,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "家居",
+      "sub_categories": [
+        "家居"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "家居领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个家居相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C045",
+      "nickname": "一条",
+      "platform": "B站",
+      "followers": 8000000,
+      "female_ratio": 0.7,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "家居",
+      "sub_categories": [
+        "家居"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "家居领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个家居相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C046",
+      "nickname": "极简主义生活",
+      "platform": "小红书",
+      "followers": 2000000,
+      "female_ratio": 0.7,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 800000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 23400,
+      "quote_embed_30s": 42546,
+      "quote_embed_60s": 63819,
+      "quote_custom": 76582,
+      "category": "家居",
+      "sub_categories": [
+        "家居"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "家居领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个家居相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C047",
+      "nickname": "38号车评中心",
+      "platform": "B站",
+      "followers": 3000000,
+      "female_ratio": 0.2,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "汽车",
+      "sub_categories": [
+        "汽车"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "汽车领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个汽车相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C048",
+      "nickname": "韩路",
+      "platform": "抖音",
+      "followers": 8000000,
+      "female_ratio": 0.2,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "汽车",
+      "sub_categories": [
+        "汽车"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "汽车领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个汽车相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C049",
+      "nickname": "陈震同学",
+      "platform": "抖音",
+      "followers": 5000000,
+      "female_ratio": 0.2,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 46523,
+      "quote_embed_30s": 84589,
+      "quote_embed_60s": 126883,
+      "quote_custom": 152260,
+      "category": "汽车",
+      "sub_categories": [
+        "汽车"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "汽车领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个汽车相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C050",
+      "nickname": "李老鼠说车",
+      "platform": "B站",
+      "followers": 2000000,
+      "female_ratio": 0.2,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 800000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 23400,
+      "quote_embed_30s": 42546,
+      "quote_embed_60s": 63819,
+      "quote_custom": 76582,
+      "category": "汽车",
+      "sub_categories": [
+        "汽车"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "汽车领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个汽车相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C051",
+      "nickname": "老番茄",
+      "platform": "B站",
+      "followers": 20000000,
+      "female_ratio": 0.25,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 8000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 131590,
+      "quote_embed_30s": 239255,
+      "quote_embed_60s": 358882,
+      "quote_custom": 430659,
+      "category": "游戏",
+      "sub_categories": [
+        "游戏"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "游戏领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个游戏相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C052",
+      "nickname": "逍遥散人",
+      "platform": "B站",
+      "followers": 5000000,
+      "female_ratio": 0.25,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 46523,
+      "quote_embed_30s": 84589,
+      "quote_embed_60s": 126883,
+      "quote_custom": 152260,
+      "category": "游戏",
+      "sub_categories": [
+        "游戏"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "游戏领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个游戏相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C053",
+      "nickname": "某幻君",
+      "platform": "B站",
+      "followers": 6000000,
+      "female_ratio": 0.25,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2400000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 53341,
+      "quote_embed_30s": 96984,
+      "quote_embed_60s": 145476,
+      "quote_custom": 174571,
+      "category": "游戏",
+      "sub_categories": [
+        "游戏"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "游戏领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个游戏相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C054",
+      "nickname": "纯黑",
+      "platform": "B站",
+      "followers": 4000000,
+      "female_ratio": 0.25,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1600000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 39354,
+      "quote_embed_30s": 71554,
+      "quote_embed_60s": 107331,
+      "quote_custom": 128797,
+      "category": "游戏",
+      "sub_categories": [
+        "游戏"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "游戏领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个游戏相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C055",
+      "nickname": "李永乐老师",
+      "platform": "抖音",
+      "followers": 15000000,
+      "female_ratio": 0.55,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 6000000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 106052,
+      "quote_embed_30s": 192822,
+      "quote_embed_60s": 289233,
+      "quote_custom": 347079,
+      "category": "教育",
+      "sub_categories": [
+        "教育"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "教育领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个教育相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C056",
+      "nickname": "罗翔说刑法",
+      "platform": "B站",
+      "followers": 25000000,
+      "female_ratio": 0.55,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 10000000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 155563,
+      "quote_embed_30s": 282842,
+      "quote_embed_60s": 424263,
+      "quote_custom": 509115,
+      "category": "教育",
+      "sub_categories": [
+        "教育"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "教育领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个教育相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C057",
+      "nickname": "张雪峰老师",
+      "platform": "抖音",
+      "followers": 8000000,
+      "female_ratio": 0.55,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "教育",
+      "sub_categories": [
+        "教育"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "教育领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个教育相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C058",
+      "nickname": "樊登",
+      "platform": "抖音",
+      "followers": 10000000,
+      "female_ratio": 0.55,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 4000000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 78244,
+      "quote_embed_30s": 142262,
+      "quote_embed_60s": 213393,
+      "quote_custom": 256071,
+      "category": "教育",
+      "sub_categories": [
+        "教育"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "教育领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个教育相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C059",
+      "nickname": "房琪kiki",
+      "platform": "抖音",
+      "followers": 15000000,
+      "female_ratio": 0.62,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 6000000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 106052,
+      "quote_embed_30s": 192822,
+      "quote_embed_60s": 289233,
+      "quote_custom": 347079,
+      "category": "旅游",
+      "sub_categories": [
+        "旅游"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "旅游领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个旅游相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C060",
+      "nickname": "韩船长漂流记",
+      "platform": "抖音",
+      "followers": 6000000,
+      "female_ratio": 0.62,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2400000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 53341,
+      "quote_embed_30s": 96984,
+      "quote_embed_60s": 145476,
+      "quote_custom": 174571,
+      "category": "旅游",
+      "sub_categories": [
+        "旅游"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "旅游领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个旅游相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C061",
+      "nickname": "侣行",
+      "platform": "抖音",
+      "followers": 12000000,
+      "female_ratio": 0.62,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 4800000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 89709,
+      "quote_embed_30s": 163108,
+      "quote_embed_60s": 244662,
+      "quote_custom": 293594,
+      "category": "旅游",
+      "sub_categories": [
+        "旅游"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "旅游领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个旅游相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C062",
+      "nickname": "破产兄弟",
+      "platform": "B站",
+      "followers": 3000000,
+      "female_ratio": 0.62,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "旅游",
+      "sub_categories": [
+        "旅游"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "旅游领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个旅游相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C063",
+      "nickname": "刘畊宏",
+      "platform": "抖音",
+      "followers": 60000000,
+      "female_ratio": 0.38,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 24000000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 299961,
+      "quote_embed_30s": 545385,
+      "quote_embed_60s": 818077,
+      "quote_custom": 981693,
+      "category": "健身",
+      "sub_categories": [
+        "健身"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健身领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个健身相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C064",
+      "nickname": "周六野Zoey",
+      "platform": "B站",
+      "followers": 5000000,
+      "female_ratio": 0.38,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 46523,
+      "quote_embed_30s": 84589,
+      "quote_embed_60s": 126883,
+      "quote_custom": 152260,
+      "category": "健身",
+      "sub_categories": [
+        "健身"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健身领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个健身相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C065",
+      "nickname": "帕梅拉",
+      "platform": "抖音",
+      "followers": 15000000,
+      "female_ratio": 0.38,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 6000000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 106052,
+      "quote_embed_30s": 192822,
+      "quote_embed_60s": 289233,
+      "quote_custom": 347079,
+      "category": "健身",
+      "sub_categories": [
+        "健身"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健身领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个健身相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C066",
+      "nickname": "帅soserious",
+      "platform": "B站",
+      "followers": 3000000,
+      "female_ratio": 0.38,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "健身",
+      "sub_categories": [
+        "健身"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健身领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个健身相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C067",
+      "nickname": "丁香医生",
+      "platform": "抖音",
+      "followers": 8000000,
+      "female_ratio": 0.7,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "健康",
+      "sub_categories": [
+        "健康"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健康领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个健康相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C068",
+      "nickname": "无穷小亮的科普日常",
+      "platform": "B站",
+      "followers": 8000000,
+      "female_ratio": 0.7,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "健康",
+      "sub_categories": [
+        "健康"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健康领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个健康相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C069",
+      "nickname": "老爸评测",
+      "platform": "抖音",
+      "followers": 15000000,
+      "female_ratio": 0.7,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 6000000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 106052,
+      "quote_embed_30s": 192822,
+      "quote_embed_60s": 289233,
+      "quote_custom": 347079,
+      "category": "健康",
+      "sub_categories": [
+        "健康"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健康领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个健康相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C070",
+      "nickname": "顾中一",
+      "platform": "抖音",
+      "followers": 3000000,
+      "female_ratio": 0.7,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "健康",
+      "sub_categories": [
+        "健康"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "健康领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个健康相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C071",
+      "nickname": "温义飞的急救财经",
+      "platform": "B站",
+      "followers": 5000000,
+      "female_ratio": 0.28,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 46523,
+      "quote_embed_30s": 84589,
+      "quote_embed_60s": 126883,
+      "quote_custom": 152260,
+      "category": "财经",
+      "sub_categories": [
+        "财经"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "财经领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个财经相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C072",
+      "nickname": "马督工",
+      "platform": "B站",
+      "followers": 3000000,
+      "female_ratio": 0.28,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "财经",
+      "sub_categories": [
+        "财经"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "财经领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个财经相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C073",
+      "nickname": "财经马红漫",
+      "platform": "抖音",
+      "followers": 4000000,
+      "female_ratio": 0.28,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1600000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 39354,
+      "quote_embed_30s": 71554,
+      "quote_embed_60s": 107331,
+      "quote_custom": 128797,
+      "category": "财经",
+      "sub_categories": [
+        "财经"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "财经领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个财经相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C074",
+      "nickname": "小Lin说",
+      "platform": "B站",
+      "followers": 6000000,
+      "female_ratio": 0.28,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2400000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 53341,
+      "quote_embed_30s": 96984,
+      "quote_embed_60s": 145476,
+      "quote_custom": 174571,
+      "category": "财经",
+      "sub_categories": [
+        "财经"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "财经领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个财经相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C075",
+      "nickname": "唐仁杰",
+      "platform": "B站",
+      "followers": 3000000,
+      "female_ratio": 0.58,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "本地生活",
+      "sub_categories": [
+        "本地生活"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "本地生活领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个本地生活相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C076",
+      "nickname": "王刚",
+      "platform": "B站",
+      "followers": 8000000,
+      "female_ratio": 0.58,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "本地生活",
+      "sub_categories": [
+        "本地生活"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "本地生活领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个本地生活相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C077",
+      "nickname": "老饭骨",
+      "platform": "抖音",
+      "followers": 10000000,
+      "female_ratio": 0.58,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 4000000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 78244,
+      "quote_embed_30s": 142262,
+      "quote_embed_60s": 213393,
+      "quote_custom": 256071,
+      "category": "本地生活",
+      "sub_categories": [
+        "本地生活"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "本地生活领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个本地生活相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C078",
+      "nickname": "日食记",
+      "platform": "B站",
+      "followers": 6000000,
+      "female_ratio": 0.58,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2400000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 53341,
+      "quote_embed_30s": 96984,
+      "quote_embed_60s": 145476,
+      "quote_custom": 174571,
+      "category": "本地生活",
+      "sub_categories": [
+        "本地生活"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "本地生活领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个本地生活相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C079",
+      "nickname": "都靓",
+      "platform": "抖音",
+      "followers": 8000000,
+      "female_ratio": 0.66,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "图书文化",
+      "sub_categories": [
+        "图书文化"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "图书文化领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个图书文化相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C080",
+      "nickname": "蒋勋",
+      "platform": "抖音",
+      "followers": 6000000,
+      "female_ratio": 0.66,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2400000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 53341,
+      "quote_embed_30s": 96984,
+      "quote_embed_60s": 145476,
+      "quote_custom": 174571,
+      "category": "图书文化",
+      "sub_categories": [
+        "图书文化"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "图书文化领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个图书文化相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C081",
+      "nickname": "梁文道",
+      "platform": "抖音",
+      "followers": 3000000,
+      "female_ratio": 0.66,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "图书文化",
+      "sub_categories": [
+        "图书文化"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "图书文化领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个图书文化相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C082",
+      "nickname": "泛式",
+      "platform": "B站",
+      "followers": 4000000,
+      "female_ratio": 0.32,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1600000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 39354,
+      "quote_embed_30s": 71554,
+      "quote_embed_60s": 107331,
+      "quote_custom": 128797,
+      "category": "二次元",
+      "sub_categories": [
+        "二次元"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "二次元领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个二次元相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C083",
+      "nickname": "LexBurner",
+      "platform": "B站",
+      "followers": 8000000,
+      "female_ratio": 0.32,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 3200000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 66186,
+      "quote_embed_30s": 120339,
+      "quote_embed_60s": 180508,
+      "quote_custom": 216610,
+      "category": "二次元",
+      "sub_categories": [
+        "二次元"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "二次元领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个二次元相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C084",
+      "nickname": "瓶子君",
+      "platform": "B站",
+      "followers": 3000000,
+      "female_ratio": 0.32,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 1200000,
+      "engagement_rate": 0.03,
+      "quote_embed_15s": 31716,
+      "quote_embed_30s": 57667,
+      "quote_embed_60s": 86500,
+      "quote_custom": 103800,
+      "category": "二次元",
+      "sub_categories": [
+        "二次元"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "二次元领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个二次元相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C085",
+      "nickname": "壁吧视频",
+      "platform": "B站",
+      "followers": 2000000,
+      "female_ratio": 0.32,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 800000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 23400,
+      "quote_embed_30s": 42546,
+      "quote_embed_60s": 63819,
+      "quote_custom": 76582,
+      "category": "二次元",
+      "sub_categories": [
+        "二次元"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "二次元领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个二次元相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C086",
+      "nickname": "张同学",
+      "platform": "抖音",
+      "followers": 10000000,
+      "female_ratio": 0.72,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 4000000,
+      "engagement_rate": 0.04,
+      "quote_embed_15s": 78244,
+      "quote_embed_30s": 142262,
+      "quote_embed_60s": 213393,
+      "quote_custom": 256071,
+      "category": "情感剧情",
+      "sub_categories": [
+        "情感剧情"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "情感剧情领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个情感剧情相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C087",
+      "nickname": "疯狂小杨哥",
+      "platform": "抖音",
+      "followers": 80000000,
+      "female_ratio": 0.72,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 32000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 372194,
+      "quote_embed_30s": 676717,
+      "quote_embed_60s": 1015075,
+      "quote_custom": 1218090,
+      "category": "情感剧情",
+      "sub_categories": [
+        "情感剧情"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "情感剧情领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个情感剧情相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C088",
+      "nickname": "大狼狗郑建鹏夫妇",
+      "platform": "抖音",
+      "followers": 20000000,
+      "female_ratio": 0.72,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 8000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 131590,
+      "quote_embed_30s": 239255,
+      "quote_embed_60s": 358882,
+      "quote_custom": 430659,
+      "category": "情感剧情",
+      "sub_categories": [
+        "情感剧情"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "情感剧情领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个情感剧情相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
+    },
+    {
+      "creator_id": "C089",
+      "nickname": "深情航仔",
+      "platform": "抖音",
+      "followers": 5000000,
+      "female_ratio": 0.72,
+      "age_18_24_ratio": 0.3,
+      "age_25_34_ratio": 0.45,
+      "avg_views": 2000000,
+      "engagement_rate": 0.05,
+      "quote_embed_15s": 46523,
+      "quote_embed_30s": 84589,
+      "quote_embed_60s": 126883,
+      "quote_custom": 152260,
+      "category": "情感剧情",
+      "sub_categories": [
+        "情感剧情"
+      ],
+      "region": "北京",
+      "coop_models": [
+        "placement",
+        "custom"
+      ],
+      "profile_text": "情感剧情领域的头部达人，粉丝画像清晰、内容稳定，适合品牌垂类合作。",
+      "content_style": "真实、专业、有辨识度",
+      "past_brands": "多个情感剧情相关品牌",
+      "cooperation_history": "历史合作稳定，对内容质量有要求。真实昵称，粉丝数/报价为估算值。"
     }
   ],
-
   "deals": [
     {
       "deal_id": "D001",
@@ -964,7 +3055,6 @@
       "result_engagement": null
     }
   ],
-
   "deal_reviews": [
     {
       "review_id": "R001",
@@ -1093,7 +3183,6 @@
       "content": "报价从10800谈到8000，达人说产品适合中大型犬所以愿接。经验：先确认产品与达人宠物的适配性再报价，适配度高时议价空间更大。"
     }
   ],
-
   "party_traits": [
     {
       "trait_id": "T001",
@@ -1248,7 +3337,7 @@
       "severity": "warning",
       "source_deal_id": "D011",
       "source_quote": "她白天上班，消息基本都要到晚上才回。紧急需求响应不了",
-      "confidence": 0.90,
+      "confidence": 0.9,
       "verified": true
     },
     {
@@ -1416,7 +3505,7 @@
       "severity": "info",
       "source_deal_id": "D009",
       "source_quote": "她不太会主动提要求，配合度高，是预算有限时的首选。唯一问题是粉丝量小，曝光上限有限",
-      "confidence": 0.90,
+      "confidence": 0.9,
       "verified": true
     },
     {

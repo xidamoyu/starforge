@@ -170,7 +170,7 @@
 │             │  │ · 商单表        │  │   或 Qwen3-Emb-0.6B│
 │ 混合检索    │  │ · party_traits  │  │                    │
 │ 向量+SQL过滤│  │   （私有资产）   │  │ 主模型（云端 API）  │
-│             │  │                 │  │ · DashScope Qwen   │
+│             │  │                 │  │ · DashScope DeepSeek   │
 │ Rerank(V2)  │  │                 │  │                    │
 └─────────────┘  └─────────────────┘  └────────────────────┘
 ```
@@ -455,7 +455,7 @@ app = graph.compile(checkpointer=PostgresSaver(...))  # 支持中断后恢复
 | 组件 | 部署方式 | 模型 | 理由 |
 |---|---|---|---|
 | **Embedding** | 本地 Ollama | bge-m3（1.2GB）或 Qwen3-Embedding-0.6B（639MB） | 进程内调用，无网络往返；4GB 显存可跑；决定向量库，必须本地且稳定 |
-| **主模型**（意图识别/需求解析/理由生成） | 云端 API | DashScope Qwen-Plus | 本地跑不动可用的 Agent 主模型；API 调用零部署成本 |
+| **主模型**（意图识别/需求解析/理由生成） | 云端 API | DashScope DeepSeek-V4-Flash | 本地跑不动可用的 Agent 主模型；API 调用零部署成本 |
 | **Rerank** | V1 不启用 | —— | 4GB 显存下与 embedding 争抢资源；作为 V2 对比实验 |
 
 **为什么这样分层，而不是全本地或全云端**：
@@ -492,7 +492,7 @@ app = graph.compile(checkpointer=PostgresSaver(...))  # 支持中断后恢复
 # 配置层（.env）
 LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 LLM_API_KEY=sk-xxx
-LLM_MODEL=qwen-plus
+LLM_MODEL=deepseek-v4-flash
 
 OLLAMA_BASE_URL=http://localhost:11434
 EMBED_MODEL=bge-m3
@@ -641,7 +641,7 @@ V3：（可选）会话存档 → 聊天记录自动入知识库
 | 数据层 | 种子数据 8 甲方 / 20 达人 / 17 商单 / 30 条 party_traits（虚构） |
 | 存储 | PostgreSQL 18（5 表 + 1 视图）+ ChromaDB（本地） |
 | Embedding | 本地 Ollama + bge-m3（实测 NaN 则切 Qwen3-Embedding-0.6B） |
-| 主模型 | DashScope Qwen-Plus（意图识别、需求解析、理由生成） |
+| 主模型 | DashScope DeepSeek-V4-Flash（意图识别、需求解析、理由生成） |
 | 检索 | **混合检索**：LLM 需求解析 → SQL 硬过滤 + 向量语义检索 → 合并 |
 | 输出 | 可溯源理由（每条绑定数据源字段/记录 ID）+ 已验证 trait 列表 |
 | Rerank | ❌ V1 不启用（4GB 显存限制），作为 V2 对比实验 |
@@ -696,7 +696,7 @@ V3：（可选）会话存档 → 聊天记录自动入知识库
 ### 9.1 项目描述模板
 
 > **广告中介商单 Agent 工作台**（个人项目）
-> **技术栈**：Python + PostgreSQL + ChromaDB + Ollama(bge-m3) + DashScope Qwen + Dify
+> **技术栈**：Python + PostgreSQL + ChromaDB + Ollama(bge-m3) + DashScope DeepSeek + Dify
 >
 > - 针对广告中介行业"历史商单经验无法复用"的痛点，设计并实现私有化 AI 工作台，覆盖达人商单匹配、建联对齐全流程。
 > - 设计**混合检索链路**：LLM 需求解析 → PostgreSQL 结构化过滤 + 向量语义检索，解决纯向量检索无法处理数值范围条件（粉丝量、报价区间）的问题。

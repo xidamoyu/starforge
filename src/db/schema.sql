@@ -63,7 +63,8 @@ CREATE TABLE creators (
     quote_custom        INTEGER,                     -- 定制视频报价（元）
 
     -- === 分类 ===
-    category            VARCHAR(64)  NOT NULL,       -- 垂类：美妆/母婴/数码...
+    category            VARCHAR(64)  NOT NULL        -- 垂类（封闭枚举 18 个）
+                        CHECK (category IN ('美妆','母婴','食品','3C数码','服饰','宠物','家居','汽车','游戏','教育','旅游','健身','健康','财经','本地生活','图书文化','二次元','情感剧情')),
     sub_categories      TEXT[],                      -- 细分标签
     region              VARCHAR(64),                 -- 地域
     coop_models         TEXT[] DEFAULT '{"placement","custom"}', -- 支持的合作模式
